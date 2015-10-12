@@ -1,0 +1,37 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>AfMulti.Common.Base</Name>
+    <Description>Multihost Architecture Template using Aufofac DI - Base Library</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AfMulti.Common.Base</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.Common.Base.csproj" File="Afmulti.Common.Base.csproj" ReplaceParameters="true">
+      <Folder Name="Attributes" TargetFolderName="Attributes">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IgnoreComparisonAttribute.cs">IgnoreComparisonAttribute.cs</ProjectItem>
+      </Folder>
+    <Folder Name="Extensions" TargetFolderName="Extensions">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ObjectExtensions.cs">ObjectExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="StringExtensions.cs">StringExtensions.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="IEnumerableExtensions.cs">IEnumerableExtensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Utils" TargetFolderName="Utils">
+        <ProjectItem ReplaceParameters="true" TargetFileName="EqualityComparer.cs">EqualityComparer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ExEqualityComparer.cs">ExEqualityComparer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SystemEnvironment.cs">SystemEnvironment.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

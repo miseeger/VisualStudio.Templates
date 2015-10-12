@@ -1,0 +1,31 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>AfMulti.Modules.Plugins.ImportData</Name>
+    <Description>MultiApp Architecture Template using Aufofac DI - ImportData Plugin</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AfMulti.Modules.Plugins.ImportData</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.Modules.Plugins.ImportData.csproj" File="AfMulti.Modules.Plugins.ImportData.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataModule.cs">ImportDataModule.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataPlugin.cs">ImportDataPlugin.cs</ProjectItem>
+      <Folder Name="MailTemplates" TargetFolderName="MailTemplates">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataMail.cshtml">ImportDataMail.cshtml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataMail.html.cshtml">ImportDataMail.html.cshtml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataMail.text.cshtml">ImportDataMail.text.cshtml</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

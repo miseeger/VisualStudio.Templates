@@ -1,0 +1,81 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>MultiApp Architecture Template</Name>
+		<Description>MultiApp Architecture Template using Aufofac DI - One functional base shared among multiple applications</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>
+		</ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>false</CreateNewFolder>
+		<DefaultName>AfMulti</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>AfMulti.png</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+			<SolutionFolder Name="Apps">
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Apps.Console.Modularity" CopyParameters="true">
+                    AfMulti.Apps.Console.Modularity\Apps.Console.Modularity.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Apps.Console.TaskRunner" CopyParameters="true">
+                    AfMulti.Apps.Console.TaskRunner\Apps.Console.TaskRunner.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Apps.WebApi.Hub" CopyParameters="true">
+                    AfMulti.Apps.WebApi.Hub\Apps.WebApi.Hub.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+			<SolutionFolder Name="Common">
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Common.Base" CopyParameters="true">
+                    AfMulti.Common.Base\Common.Base.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Common.Data" CopyParameters="true">
+                    AfMulti.Common.Data\Common.Data.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Common.Data.Model" CopyParameters="true">
+                    AfMulti.Common.Data.Model\Common.Data.Model.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Common.Interfaces" CopyParameters="true">
+                    AfMulti.Common.Interfaces\Common.Interfaces.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Common.Services" CopyParameters="true">
+                    AfMulti.Common.Services\Common.Services.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+			<SolutionFolder Name="Domain">
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Value" CopyParameters="true">
+                    AfMulti.Domain.Value\Domain.Value.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Value.Interfaces" CopyParameters="true">
+                    AfMulti.Domain.Value.Interfaces\Domain.Value.Interfaces.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+			<SolutionFolder Name="Modules">
+				<SolutionFolder Name="Common">
+					<ProjectTemplateLink ProjectName="$safeprojectname$.Modules.Common.Services" CopyParameters="true">
+						AfMulti.Modules.Common.Services\Modules.Common.Services.vstemplate
+					</ProjectTemplateLink>
+				</SolutionFolder>
+				<SolutionFolder Name="Domain">
+					<ProjectTemplateLink ProjectName="$safeprojectname$.Modules.Domain.Value" CopyParameters="true">
+						AfMulti.Modules.Domain.Value\Modules.Domain.Value.vstemplate
+					</ProjectTemplateLink>
+				</SolutionFolder>
+				<SolutionFolder Name="Plugins">
+					<ProjectTemplateLink ProjectName="$safeprojectname$.Modules.Plugins.CheckData" CopyParameters="true">
+						AfMulti.Modules.Plugins.CheckData\Modules.Plugins.CheckData.vstemplate
+					</ProjectTemplateLink>
+					<ProjectTemplateLink ProjectName="$safeprojectname$.Modules.Plugins.ImportData" CopyParameters="true">
+						AfMulti.Modules.Plugins.ImportData\Modules.Plugins.ImportData.vstemplate
+					</ProjectTemplateLink>
+				</SolutionFolder>
+				<SolutionFolder Name="WebApis">
+					<ProjectTemplateLink ProjectName="$safeprojectname$.Modules.WebApis.Value" CopyParameters="true">
+						AfMulti.Modules.WebApis.Value\Modules.WebApis.Value.vstemplate
+					</ProjectTemplateLink>
+				</SolutionFolder>				
+            </SolutionFolder>
+        </ProjectCollection>
+	</TemplateContent>
+</VSTemplate>

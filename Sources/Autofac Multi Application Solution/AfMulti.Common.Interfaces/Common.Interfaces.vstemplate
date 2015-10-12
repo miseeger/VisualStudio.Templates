@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>AfMulti.Common.Interfaces</Name>
+    <Description>Multihost Architecture Template using Aufofac DI - Common Interfaces</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AfMulti.Common.Interfaces</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.Common.Interfaces.csproj" File="AfMulti.Common.Interfaces.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ICrystalReportService.cs">ICrystalReportService.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="IReportService.cs">IReportService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IGlobalInfoService.cs">IGlobalInfoService.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="IMemDataService.cs">IMemDataService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ILoggingService.cs">ILoggingService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IMessageService.cs">IMessageService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IDbDataService.cs">IDbDataService.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
