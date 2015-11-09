@@ -41,15 +41,8 @@ namespace $safeprojectname$
 		{
 			base.Load(builder);
 
-			var baseDir = AppDomain.CurrentDomain.BaseDirectory;
-			var relativeAssemblyPath =
-				System.IO.Directory.Exists(String.Format(@"{0}Bin\Lib", baseDir))
-					? String.Format(@"{0}Bin\Lib", baseDir)
-					: @".\";
-
 			// register common services
-			builder.RegisterAssemblyTypes(Assembly.LoadFrom(
-				String.Format(@"{0}\$ext_safeprojectname$.Common.Services.dll", relativeAssemblyPath)))
+			builder.RegisterAssemblyTypes(Assembly.LoadFrom(@".\$ext_safeprojectname$.Common.Services.dll"))
 				.Where(t => t.GetCustomAttributes(typeof (RegisterServiceAttribute), false).Any())
 				.AsSelf()
 				.AsImplementedInterfaces()
@@ -63,8 +56,7 @@ namespace $safeprojectname$
 				.SingleInstance();
 
 			// Register common data services
-			builder.RegisterAssemblyTypes(Assembly.LoadFrom(
-				String.Format(@"{0}\$ext_safeprojectname$.Common.Data.dll", relativeAssemblyPath)))
+			builder.RegisterAssemblyTypes(Assembly.LoadFrom(@".\$ext_safeprojectname$.Common.Data.dll"))
 				.Where(t => t.GetCustomAttributes(typeof (RegisterServiceAttribute), false).Any())
 				.AsSelf()
 				.AsImplementedInterfaces()

@@ -16,15 +16,6 @@
   <TemplateContent>
     <Project TargetFileName="$safeprojectname$.Apps.WebApi.Hub.csproj" File="AfMulti.Apps.WebApi.Hub.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
-	  <Folder Name="_ServiceInstaller" TargetFolderName="_ServiceInstaller">
-		<ProjectItem ReplaceParameters="false" TargetFileName="InstallUtil.exe_RenameToExe">InstallUtil.exe_RenameToExe</ProjectItem>
-		<ProjectItem ReplaceParameters="false" TargetFileName="InstallUtil.exe.config$">InstallUtil.exe.config$</ProjectItem>
-		<ProjectItem ReplaceParameters="true" TargetFileName="InstallWebApiService.bat">InstallWebApiService.bat</ProjectItem>
-		<ProjectItem ReplaceParameters="true" TargetFileName="InstallWebApiService_Debug.bat">InstallWebApiService_Debug.bat</ProjectItem>
-		<ProjectItem ReplaceParameters="true" TargetFileName="InstallWebApiService_Release.bat">InstallWebApiService_Release.bat</ProjectItem>
-		<ProjectItem ReplaceParameters="true" TargetFileName="UninstallWebApiService_Debug.bat">UninstallWebApiService_Debug.bat</ProjectItem>
-		<ProjectItem ReplaceParameters="true" TargetFileName="UninstallWebApiService_Release.bat">UninstallWebApiService_Release.bat</ProjectItem>
-	  </Folder>
       <Folder Name="App_Start" TargetFolderName="App_Start">
         <ProjectItem ReplaceParameters="true" TargetFileName="DependencyConfig.cs">DependencyConfig.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
