@@ -9,25 +9,25 @@ namespace $safeprojectname$
     [RegisterService]
 	public class LoggingService : ILoggingService
 	{
+		private static NLog.Logger _logger = LogManager.GetLogger("$safeprojectname$");
 
-		public static NLog.Logger _logger = LogManager.GetLogger("$safeprojectname$");
-
-		public void SetName(string LoggerName)
-		{
-			_logger = LogManager.GetLogger(LoggerName);
-		}
-
-
-		public void Log(LogLevel lvl, string Message)
-		{
-			_logger.Log(lvl, Message);
-		}
+		
+		public void SetName(string loggerName)
+        {
+            _logger = LogManager.GetLogger(loggerName);
+        }
 
 
-		public void LogEx(string Message, Exception Ex)
-		{
-			_logger.ErrorException(Message, Ex);
-		}
+        public void Log(LogLevel lvl, string message)
+        {
+            _logger.Log(lvl, message);
+        }
+
+
+        public void LogEx(string message, Exception ex)
+        {
+            _logger.Error(ex, message);
+        }
 
 	}
 

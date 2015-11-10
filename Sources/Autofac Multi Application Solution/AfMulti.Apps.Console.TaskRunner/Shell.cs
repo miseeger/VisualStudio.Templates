@@ -26,7 +26,7 @@ namespace $safeprojectname$
 		}
 
 
-		private void CurrentDomain_UnhandledException(Object sender, UnhandledExceptionEventArgs e)
+		private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
 		{
 			try
 			{

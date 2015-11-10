@@ -26,7 +26,7 @@ namespace $safeprojectname$
 		}
 
 
-		private void CurrentDomain_UnhandledException(Object sender, UnhandledExceptionEventArgs e)
+		private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
 		{
 			try
 			{
@@ -60,14 +60,15 @@ namespace $safeprojectname$
 
 			_logger.SetName("DbLogger");
 			var hostName = Dns.GetHostName();
-			var ipAddress = Dns.GetHostByName(hostName).AddressList[0].ToString();
+			var ipAddress = Dns.GetHostEntry(hostName).AddressList[0].ToString();
+			
 			GlobalDiagnosticsContext.Set("ipAddress", ipAddress);
 			GlobalDiagnosticsContext.Set("program", "TestHost");
 			GlobalDiagnosticsContext.Set("level", "4");
 			GlobalDiagnosticsContext.Set("messageId", "99999");
-			_logger.Log(LogLevel.Info, "Test von NLog ;-)");
+			
+			_logger.Log(LogLevel.Info, "Test from NLog ;-)");
 			_logger.SetName("$safeprojectname$");
-
 
 			System.Console.WriteLine("\nFrom DataService:");
 			_dataService.Hello();
@@ -75,7 +76,6 @@ namespace $safeprojectname$
 			System.Console.WriteLine("\nRunning CheckDataPlugin:");
 			var cr = _container.ResolveNamed<IPlugin>("CheckDataPlugin");
 			cr.Run(args);
-
 
 			try
 			{

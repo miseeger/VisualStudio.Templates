@@ -40,8 +40,12 @@
       <HintPath>..\packages\AutofacModularity.3.5.2\lib\net451\AutofacModularity.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EmailModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7750584179e3108b, processorArchitecture=x86">
-      <HintPath>..\packages\mailzor.1.0.0.13\lib\net40\EmailModule.dll</HintPath>
+    <Reference Include="DotLiquid, Version=1.8.0.0, Culture=neutral, PublicKeyToken=82e46016ecf9f07c, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotLiquid.1.8.0\lib\NET45\DotLiquid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotLiquid.Mailer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotLiquid.Mailer.1.0.0\lib\net451\DotLiquid.Mailer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -50,13 +54,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MailTemplates\ImportDataMail.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="MailTemplates\ImportDataMail.html.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="MailTemplates\ImportDataMail.text.cshtml">
+    <None Include="MailTemplates\ImportDataMail.liquid.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />

@@ -1,15 +1,8 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
+﻿using System.Linq;
 using System.Reflection;
-using System.Text;
 using Autofac;
-using Autofac.Core;
-using Autofac.Integration.WebApi;
 using AutofacModularity;
-using EmailModule;
+using DotLiquid.Mailer;
 
 
 namespace $safeprojectname$
@@ -68,28 +61,17 @@ namespace $safeprojectname$
 					})
 				.SingleInstance();
 
-			// Register Mailzor E-Mail-Service
-			builder.Register(c => new FileSystemEmailTemplateContentReader(MailTemplatesDirectory))
-				.As<IEmailTemplateContentReader>();
+            // Register Email Service
+            builder.Register(c => new MailEngine()
+            {
+                DefaultFromAddress = MailDefaultFromAddress,
+                IsHtml = true,
+                SmtpServer = MailSmtpServerIp,
+                SmtpPort = int.Parse(MailSmtpServerPort),
+                UseDefaultCredentials = true,
+                TemplateDir = MailTemplatesDirectory
+            }).As<IMailEngine>();
 
-			builder.RegisterType<EmailTemplateEngine>()
-				.As<IEmailTemplateEngine>();
-
-			builder.Register(
-				c => new EmailSender
-				{
-					CreateClientFactory = () 
-						=> new SmtpClientWrapper(new SmtpClient(MailSmtpServerIp, Convert.ToInt16(MailSmtpServerPort)))
-					, DefaultFromAddress = MailDefaultFromAddress
-				})
-				.As<IEmailSender>();
-
-			builder.Register(
-				c => new EmailSubsystem(
-					c.Resolve<IEmailTemplateEngine>(), 
-					c.Resolve<IEmailSender>()))
-				.As<IEmailSystem>()
-				.SingleInstance();
 		}
 
 	}

@@ -18,9 +18,7 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataModule.cs">ImportDataModule.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataPlugin.cs">ImportDataPlugin.cs</ProjectItem>
       <Folder Name="MailTemplates" TargetFolderName="MailTemplates">
-        <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataMail.cshtml">ImportDataMail.cshtml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataMail.html.cshtml">ImportDataMail.html.cshtml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataMail.text.cshtml">ImportDataMail.text.cshtml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ImportDataMail.liquid.html">ImportDataMail.liquid.html</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
