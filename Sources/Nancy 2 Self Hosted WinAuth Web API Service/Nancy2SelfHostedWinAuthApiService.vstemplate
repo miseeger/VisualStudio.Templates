@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Nancy 2 Service (WinAuth)</Name>
+    <Description>Creates a Windows Service for a self hosted and Windows authenticated Web API with Nancy 2</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <Icon>NancyTemplateIcon.png</Icon>
+    <TemplateID>NancyFX.WindowsService</TemplateID>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>NancyApiService</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <!--LocationField>Enabled</LocationField-->
+    <!--EnableLocationBrowseButton>true</EnableLocationBrowseButton-->
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Nancy2SelfHostedWinAuthApiService.csproj" TargetFileName="$safeprojectname$.csproj" ReplaceParameters="true">
+      <Folder Name="Database" TargetFolderName="Database">
+        <Folder Name="Mapping" TargetFolderName="Mapping">
+          <ProjectItem ReplaceParameters="true" TargetFileName="CostumeMapping.cs">CostumeMapping.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NPocoDb.cs">NPocoDb.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NPocoDbConfig.cs">NPocoDbConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NPocoDbInterceptors.cs">NPocoDbInterceptors.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Interfaces" TargetFolderName="Interfaces">
+        <ProjectItem ReplaceParameters="true" TargetFileName="INPocoDb.cs">INPocoDb.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="INPocoDbService.cs">INPocoDbService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Costume.cs">Costume.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Modules" TargetFolderName="Modules">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HomeModule.cs">HomeModule.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="NPocoDbService.cs">NPocoDbService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Utilities" TargetFolderName="Utilities">
+        <ProjectItem ReplaceParameters="true" TargetFileName="GuidComb.cs">GuidComb.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AppBootstrapper.cs">AppBootstrapper.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      <ProjectItem OpenInEditor="true" ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
