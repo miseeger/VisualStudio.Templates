@@ -1,0 +1,30 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>NetCoreApi.Core</Name>
+    <Description>Core functionality for an ASP.NET API Core application</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <Icon>Library.png</Icon>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>NetCoreApi.CoreLib</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>NetCoreApi.Core</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <!-- <LocationField>Enabled</LocationField> -->
+    <!-- <EnableLocationBrowseButton>true</EnableLocationBrowseButton> -->
+  </TemplateData>
+  <TemplateContent>
+    <Project File="NetCoreApi.Core.csproj" TargetFileName="$safeprojectname$.Core.csproj"  ReplaceParameters="true">
+      <Folder Name="Data" TargetFolderName="Data">
+        <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$Context.cs">NetCoreApiContext.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="empty.txt">empty.txt</ProjectItem>
+      </Folder>      
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="empty.txt">empty.txt</ProjectItem>
+      </Folder>      
+    </Project>
+  </TemplateContent>
+</VSTemplate>
