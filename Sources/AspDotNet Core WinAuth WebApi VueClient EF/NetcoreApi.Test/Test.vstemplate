@@ -1,0 +1,23 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>NetCoreApi.Test</Name>
+    <Description>Testproject</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <Icon>Test.png</Icon>
+    <TemplateID>NetCoreApi.TestLib</TemplateID>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>NetCoreApi.Test</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <!-- <LocationField>Enabled</LocationField> -->
+    <!-- <EnableLocationBrowseButton>true</EnableLocationBrowseButton> -->
+  </TemplateData>
+  <TemplateContent>
+    <Project File="NetCoreApi.Test.csproj" TargetFileName="$safeprojectname$.Test.csproj"  ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Test.playlist">Test.playlist</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="UnitTest1.cs">UnitTest1.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

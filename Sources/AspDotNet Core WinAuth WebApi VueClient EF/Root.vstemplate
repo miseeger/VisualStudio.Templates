@@ -1,0 +1,29 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Asp.NET Core WebAPI Template w/ EF DB Layer</Name>
+		<Description>Creates an Asp.NET Core Windows authenticated WebAPI with a complete EF Core Sqlite DB layer</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>
+		</ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>false</CreateNewFolder>
+		<DefaultName>WebAPICore</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>WebAPICore.png</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Core" CopyParameters="true">
+                NetCoreApi.Core\Core.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Web" CopyParameters="true">
+                NetCoreApi.Web\Web.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Test" CopyParameters="true">
+                NetCoreApi.Test\Test.vstemplate
+            </ProjectTemplateLink>
+        </ProjectCollection>
+	</TemplateContent>
+</VSTemplate>
