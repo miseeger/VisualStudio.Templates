@@ -131,6 +131,8 @@ namespace $safeprojectname$
 
             //app.UseCors("AllowAll");
 
+            app.UseFastReport();
+
             //app.UseHttpsRedirection();
 
             app.UseStaticFiles();

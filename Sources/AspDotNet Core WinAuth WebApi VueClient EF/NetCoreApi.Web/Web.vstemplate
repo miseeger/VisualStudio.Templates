@@ -26,21 +26,30 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="AlbumController.cs">AlbumController.cs</ProjectItem>        
         <ProjectItem ReplaceParameters="true" TargetFileName="EmployeeController.cs">EmployeeController.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ReportsController.cs">ReportsController.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ValuesController.cs">ValuesController.cs</ProjectItem>
       </Folder>
       <Folder Name="Data" TargetFolderName="Data">
         <ProjectItem ReplaceParameters="true" TargetFileName="Chinook_Sqlite.sqlite">Chinook_Sqlite.sqlite</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="nwind.xml">nwind.xml</ProjectItem>
       </Folder>      
       <Folder Name="Middleware" TargetFolderName="Middleware">
         <ProjectItem ReplaceParameters="true" TargetFileName="RequestLogMiddleware.cs">RequestLogMiddleware.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="RequestLogMiddlewareExtensions.cs">RequestLogMiddlewareExtensions.cs</ProjectItem>
       </Folder>
+      <Folder Name="Pages" TargetFolderName="Pages">
+        <ProjectItem ReplaceParameters="true" launchSettings.json="_ViewImports.cshtml">_ViewImports.cshtml</ProjectItem>
+      </Folder>      
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem ReplaceParameters="true" launchSettings.json="launchSettings.json">launchSettings.json</ProjectItem>
-      </Folder>            
-      <Folder Name="wwwroot" TargetFolderName="wwwroot">
-        <ProjectItem ReplaceParameters="true" TargetFileName="empty.txt">empty.txt</ProjectItem>
       </Folder>
+      <Folder Name="Reports" TargetFolderName="Reports">
+        <ProjectItem ReplaceParameters="true" launchSettings.json="Master-Detail.frx">Master-Detail.frx</ProjectItem>
+      </Folder>      
+      <Folder Name="Views\Reports" TargetFolderName="Views\Reports">      
+        <ProjectItem ReplaceParameters="true" TargetFileName="ShowReport.cshtml">ShowReport.cshtml</ProjectItem>
+      </Folder>      
+
       <Folder Name="VueClient" TargetFolderName="VueClient">
         <ProjectItem ReplaceParameters="true" TargetFileName=".browserslistrc">.browserslistrc</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName=".gitignore">.gitignore</ProjectItem>
@@ -84,6 +93,9 @@
       </Folder>
       <Folder Name="VueClient\tests\unit" TargetFolderName="VueClient\tests\unit">
         <ProjectItem ReplaceParameters="true" TargetFileName="example.spec.ts">example.spec.ts</ProjectItem>
+      </Folder>
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <ProjectItem ReplaceParameters="true" TargetFileName="empty.txt">empty.txt</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.Development.json">appsettings.Development.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
