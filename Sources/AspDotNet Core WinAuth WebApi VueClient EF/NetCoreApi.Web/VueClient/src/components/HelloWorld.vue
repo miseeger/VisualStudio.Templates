@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div v-if="loading">loading Album from API...</div>
+    <div v-else>Random album: {{ album.title }} by {{ album.artistName }}</div>
+    <button @click="loadRandomAlbum">Another random album</button>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -35,13 +38,39 @@
 
 <script lang="ts">
     import Vue from 'vue';
+    import * as AlbumService from '@/services/AlbumService';
 
     export default Vue.extend({
+        data() {
+            return {
+                album: {},
+                loading: false
+            }
+        },
         props: {
             msg: {
                 type: String
             }
-        }
+        },
+        created(): void {
+            this.loadRandomAlbum();
+            console.log("HelloWorld was created ... !!!");
+        },
+        methods: {
+            loadRandomAlbum(): void {
+                this.loading = true;
+                AlbumService.getAlbumById(Math.floor(Math.random() * 256))
+                    .then((response) => {
+                        this.album = response.data;
+
+                        // a short delay just to show the "load"-label ;-)
+                        setTimeout(() => {
+                            this.loading = false;  
+                        }, 1000);
+                    
+                    });
+            }  
+        },
     })
 </script>
 

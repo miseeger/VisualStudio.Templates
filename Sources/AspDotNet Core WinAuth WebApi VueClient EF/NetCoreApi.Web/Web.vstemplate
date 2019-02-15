@@ -77,6 +77,9 @@
       <Folder Name="VueClient\src\components" TargetFolderName="VueClient\src\components">
         <ProjectItem ReplaceParameters="true" TargetFileName="HelloWorld.vue">HelloWorld.vue</ProjectItem>
       </Folder>      
+      <Folder Name="VueClient\src\services" TargetFolderName="VueClient\src\services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AlbumService.ts">AlbumService.ts</ProjectItem>
+      </Folder>            
       <Folder Name="VueClient\src\views" TargetFolderName="VueClient\src\views">
         <ProjectItem ReplaceParameters="true" TargetFileName="About.vue">About.vue</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Home.vue">Home.vue</ProjectItem>
