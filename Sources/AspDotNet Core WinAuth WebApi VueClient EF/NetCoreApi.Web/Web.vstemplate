@@ -79,10 +79,14 @@
       </Folder>      
       <Folder Name="VueClient\src\services" TargetFolderName="VueClient\src\services">
         <ProjectItem ReplaceParameters="true" TargetFileName="AlbumService.ts">AlbumService.ts</ProjectItem>
-      </Folder>            
+      </Folder>
+      <Folder Name="VueClient\src\types" TargetFolderName="VueClient\src\types">
+        <ProjectItem ReplaceParameters="true" TargetFileName="vue-form-generator.d.ts">vue-form-generator.d.ts</ProjectItem>
+      </Folder>
       <Folder Name="VueClient\src\views" TargetFolderName="VueClient\src\views">
         <ProjectItem ReplaceParameters="true" TargetFileName="About.vue">About.vue</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Home.vue">Home.vue</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TestForm.vue">TestForm.vue</ProjectItem>
       </Folder>  
       <Folder Name="VueClient\tests\e2e\plugins" TargetFolderName="VueClient\tests\e2e\plugins">
         <ProjectItem ReplaceParameters="true" TargetFileName="index.js">index.js</ProjectItem>
