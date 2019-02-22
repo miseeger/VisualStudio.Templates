@@ -1,10 +1,9 @@
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
 	<TemplateData>
-		<Name>Asp.NET Core WebAPI Template w/ EF DB Layer</Name>
-		<Description>Creates an Asp.NET Core Windows authenticated WebAPI with a complete EF Core Sqlite DB layer</Description>
+		<Name>Asp.NET Core WinAuth WebAPI Template w/ EF DB Layer</Name>
+		<Description>Creates an Asp.NET Core Windows authenticated WebAPI with a complete EF Core Sqlite DB layer including a Vue SPA</Description>
 		<ProjectType>CSharp</ProjectType>
-		<ProjectSubType>
-		</ProjectSubType>
+		<ProjectSubType></ProjectSubType>
 		<SortOrder>1000</SortOrder>
 		<CreateNewFolder>false</CreateNewFolder>
 		<DefaultName>WebAPICore</DefaultName>

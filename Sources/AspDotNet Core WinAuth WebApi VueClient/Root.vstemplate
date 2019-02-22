@@ -1,10 +1,9 @@
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
 	<TemplateData>
 		<Name>Asp.NET Core WebAPI Template</Name>
-		<Description>Creates an Asp.NET Core windows authenticated WebAPI</Description>
+		<Description>Creates an Asp.NET Core Windows authenticated WebAPI with a simple Vue SPA</Description>
 		<ProjectType>CSharp</ProjectType>
-		<ProjectSubType>
-		</ProjectSubType>
+		<ProjectSubType></ProjectSubType>
 		<SortOrder>1000</SortOrder>
 		<CreateNewFolder>false</CreateNewFolder>
 		<DefaultName>WebAPICore</DefaultName>

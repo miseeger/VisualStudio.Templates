@@ -3,6 +3,10 @@
         <div id="nav">
             <router-link to="/">Home&nbsp;</router-link>|
             <router-link to="/testform">&nbsp;Test Form&nbsp;</router-link>|
+            <a
+                target="_blank"
+                href="http://localhost:4746/api/reports/showreport"
+            >&nbsp;Example Report&nbsp;</a>|
             <router-link to="/about">&nbsp;About</router-link>
         </div>
         <router-view/>
