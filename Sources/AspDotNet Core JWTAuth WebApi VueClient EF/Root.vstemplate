@@ -1,0 +1,28 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Asp.NET Core Identity JWT WebAPI w/ EF</Name>
+		<Description>Creates an Asp.NET Core JWT authenticated WebAPI with a complete EF Core Sqlite DB layer using ASP.NET Core Identity including a Vue SPA</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType></ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>false</CreateNewFolder>
+		<DefaultName>WebAPICore</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>WebAPICore.png</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Core" CopyParameters="true">
+                NetCoreApi.Core\Core.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Web" CopyParameters="true">
+                NetCoreApi.Web\Web.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Test" CopyParameters="true">
+                NetCoreApi.Test\Test.vstemplate
+            </ProjectTemplateLink>
+        </ProjectCollection>
+	</TemplateContent>
+</VSTemplate>

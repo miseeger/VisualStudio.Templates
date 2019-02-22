@@ -1,0 +1,116 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>NetCoreApi.Web</Name>
+    <Description>WebAPI project for an ASP.NET API Core application</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <Icon>WebAPICore.png</Icon>
+    <TemplateID>NetCoreApi.WebApi</TemplateID>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>NetCoreApi.Web</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <!-- <LocationField>Enabled</LocationField> -->
+    <!-- <EnableLocationBrowseButton>true</EnableLocationBrowseButton> -->
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$targetframework$" Value="netcoreapp2.2"/>
+    </CustomParameters>
+    <Project TargetFileName="$safeprojectname$.Web.csproj" File="NetCoreApi.Web.csproj" ReplaceParameters="true">
+      <Folder Name="Configurations" TargetFolderName="Configurations">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ServicesConfiguration.cs">ServicesConfiguration.cs</ProjectItem>        
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AlbumController.cs">AlbumController.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="AccountController.cs">AccountController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="EmployeeController.cs">EmployeeController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ReportsController.cs">ReportsController.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="TokenController.cs">TokenController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ValuesController.cs">ValuesController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Data" TargetFolderName="Data">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Chinook_Sqlite.sqlite">Chinook_Sqlite.sqlite</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="nwind.xml">nwind.xml</ProjectItem>
+      </Folder>      
+      <Folder Name="Middleware" TargetFolderName="Middleware">
+        <ProjectItem ReplaceParameters="true" TargetFileName="RequestLogMiddleware.cs">RequestLogMiddleware.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RequestLogMiddlewareExtensions.cs">RequestLogMiddlewareExtensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Pages" TargetFolderName="Pages">
+        <ProjectItem ReplaceParameters="true" launchSettings.json="_ViewImports.cshtml">_ViewImports.cshtml</ProjectItem>
+      </Folder>      
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" launchSettings.json="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="Reports" TargetFolderName="Reports">
+        <ProjectItem ReplaceParameters="true" launchSettings.json="Master-Detail.frx">Master-Detail.frx</ProjectItem>
+      </Folder>      
+      <Folder Name="Views\Reports" TargetFolderName="Views\Reports">      
+        <ProjectItem ReplaceParameters="true" TargetFileName="ShowReport.cshtml">ShowReport.cshtml</ProjectItem>
+      </Folder>      
+
+      <Folder Name="VueClient" TargetFolderName="VueClient">
+        <ProjectItem ReplaceParameters="true" TargetFileName=".browserslistrc">.browserslistrc</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName=".gitignore">.gitignore</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="babel.config.js">babel.config.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="cypress.json">cypress.json</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jest.config.js">jest.config.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="package.json">package.json</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="postcss.config.js">postcss.config.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.json">tsconfig.json</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="tslint.json">tslint.json</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="vue.config.js">vue.config.js</ProjectItem>
+      </Folder>
+      <Folder Name="VueClient\src" TargetFolderName="VueClient\src">      
+        <ProjectItem ReplaceParameters="true" TargetFileName="App.vue">App.vue</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="main.ts">main.ts</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="registerServiceWorker.ts">registerServiceWorker.ts</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="router.ts">router.ts</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="shims-tsx.d.ts">shims-tsx.d.ts</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="shims-vue.d.ts">shims-vue.d.ts</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="store.ts">store.ts</ProjectItem>
+      </Folder>      
+      <Folder Name="VueClient\src\assets" TargetFolderName="VueClient\src\assets">
+        <ProjectItem ReplaceParameters="true" TargetFileName="logo.png">logo.png</ProjectItem>
+      </Folder>      
+      <Folder Name="VueClient\src\components" TargetFolderName="VueClient\src\components">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HelloWorld.vue">HelloWorld.vue</ProjectItem>
+      </Folder>      
+      <Folder Name="VueClient\src\services" TargetFolderName="VueClient\src\services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AlbumService.ts">AlbumService.ts</ProjectItem>
+      </Folder>
+      <Folder Name="VueClient\src\types" TargetFolderName="VueClient\src\types">
+        <ProjectItem ReplaceParameters="true" TargetFileName="vue-form-generator.d.ts">vue-form-generator.d.ts</ProjectItem>
+      </Folder>
+      <Folder Name="VueClient\src\views" TargetFolderName="VueClient\src\views">
+        <ProjectItem ReplaceParameters="true" TargetFileName="About.vue">About.vue</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Home.vue">Home.vue</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TestForm.vue">TestForm.vue</ProjectItem>
+      </Folder>  
+      <Folder Name="VueClient\tests\e2e\plugins" TargetFolderName="VueClient\tests\e2e\plugins">
+        <ProjectItem ReplaceParameters="true" TargetFileName="index.js">index.js</ProjectItem>
+      </Folder>        
+      <Folder Name="VueClient\tests\e2e\specs" TargetFolderName="VueClient\tests\e2e\specs">
+        <ProjectItem ReplaceParameters="true" TargetFileName="test.js">test.js</ProjectItem>
+      </Folder>
+      <Folder Name="VueClient\tests\e2e\support" TargetFolderName="VueClient\tests\e2e\support">
+        <ProjectItem ReplaceParameters="true" TargetFileName="commands.js">commands.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="index.js">index.js</ProjectItem>
+      </Folder>
+      <Folder Name="VueClient\tests\unit" TargetFolderName="VueClient\tests\unit">
+        <ProjectItem ReplaceParameters="true" TargetFileName="example.spec.ts">example.spec.ts</ProjectItem>
+      </Folder>
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <ProjectItem ReplaceParameters="true" TargetFileName="empty.txt">empty.txt</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.Development.json">appsettings.Development.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="nlog.config">nlog.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
