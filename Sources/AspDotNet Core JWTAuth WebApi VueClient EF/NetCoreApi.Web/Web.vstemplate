@@ -71,7 +71,6 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="router.ts">router.ts</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="shims-tsx.d.ts">shims-tsx.d.ts</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="shims-vue.d.ts">shims-vue.d.ts</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="store.ts">store.ts</ProjectItem>
       </Folder>      
       <Folder Name="VueClient\src\assets" TargetFolderName="VueClient\src\assets">
         <ProjectItem ReplaceParameters="true" TargetFileName="logo.png">logo.png</ProjectItem>
