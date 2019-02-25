@@ -38,6 +38,7 @@
         "node_modules"
     ],
     "typeRoots": [
-        "src/types"
+        "src/typings",
+        "src/typings/vue"
     ]
 }

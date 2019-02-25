@@ -4,12 +4,14 @@
         <div class="row justify-content-md-center">
             <div class="col-md-6">
                 <div>&nbsp;</div>
-                <div class="alert alert-warning" v-if="loading">loading Album from API...</div>
-                <div
-                    class="alert alert-success"
-                    v-else
-                >Random album: {{ album.title }} by {{ album.artistName }}</div>
-                <button class="btn btn-sm btn-success" @click="loadRandomAlbum">Another random album</button>
+                <div class="alert alert-warning" v-if="loading">
+                    <font-awesome-icon icon="cog" spin /> 
+                    &nbsp;loading Album from API ...
+                </div>
+                <div class="alert alert-success" v-else>
+                    Random album: {{ album.title }} by {{ album.artistName }}
+                </div>
+                <button class="btn btn-sm btn-success" @click="loadRandomAlbum"><font-awesome-icon icon="redo" /> &nbsp;Another random album</button>
                 <div>&nbsp;</div>
             </div>
         </div>
@@ -124,8 +126,9 @@ export default Vue.extend({
         }
     },
     created(): void {
+        let vm = this;
         this.loadRandomAlbum();
-        console.log("HelloWorld was created ... !!!");
+        this.$toastr.s("HelloWorld was created ... !!!");
     },
     methods: {
         loadRandomAlbum(): void {

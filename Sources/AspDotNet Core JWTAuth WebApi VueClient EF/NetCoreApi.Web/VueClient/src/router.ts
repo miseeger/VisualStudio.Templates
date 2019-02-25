@@ -1,10 +1,11 @@
 import Vue from 'vue';
+import store from "@/store/store";
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     routes: [
         {
             path: '/',
@@ -15,6 +16,7 @@ export default new Router({
             path: '/testform',
             name: 'testform',
             component: () => import(/* webpackChunkName: "testform" */ './views/TestForm.vue'),
+            meta: { requiresAuth: true },
         },
         {
             path: '/about',
@@ -26,3 +28,23 @@ export default new Router({
         },
     ],
 });
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(route => route.meta.requiresAuth))
+    {
+        if (!store.getters.isAuthenticated)
+        {
+            console.log(`Auth needed! ${from.path}, ${to.path}`);
+            store.commit("SHOW_AUTH_MODAL");
+            next({ path: from.path, query: { redirect: to.path } });
+        } else
+        {
+            next();
+        }
+    } else
+    {
+        next();
+    }
+});
+
+export default router;
