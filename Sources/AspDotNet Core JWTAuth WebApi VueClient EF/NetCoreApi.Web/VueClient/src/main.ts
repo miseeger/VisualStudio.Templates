@@ -21,7 +21,7 @@ Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
 Vue.use(VueToastr, {
-    defaultPosition: "toast-top-right",
+    defaultPosition: "toast-bottom-right",
     defaultTimeout: 3000,
     defaultProgressBar: false,
     defaultProgressBarValue: 0,

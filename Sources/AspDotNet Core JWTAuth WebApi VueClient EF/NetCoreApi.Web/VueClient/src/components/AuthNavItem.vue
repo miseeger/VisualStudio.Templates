@@ -1,15 +1,16 @@
 <template>
     <b-nav-item-dropdown v-if="isAuthenticated" right>
         <template slot="button-content">
-            <i class="fas fa-user"></i>
+            <font-awesome-icon icon="user"/>
+            &nbsp;{{ loggedInUser }}
         </template>
         <b-dropdown-item @click="logout">
-            <i class="fas fa-sign-out-alt"></i>
+            <font-awesome-icon icon="sign-out-alt"/>
             Logout
         </b-dropdown-item>
     </b-nav-item-dropdown>
     <b-nav-item v-else @click="login">
-        <i class="fas fa-user"></i>
+        <font-awesome-icon icon="user"/>
         Login / register
     </b-nav-item>
 </template>
@@ -22,6 +23,9 @@ export default Vue.extend({
     computed: {
         isAuthenticated(): boolean {
             return this.$store.getters.isAuthenticated;
+        },
+        loggedInUser(): string {
+            return this.$store.getters.loggedInUser;
         }
     },
     methods: {

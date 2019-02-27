@@ -40,7 +40,7 @@ export default Vue.extend({
         return {
             email: "",
             password: "",
-            error: { error: [] } as IErrors | null
+            error: null as string | null
         };
     },
     computed: {

@@ -15,8 +15,9 @@ const router = new Router({
         {
             path: '/testform',
             name: 'testform',
-            component: () => import(/* webpackChunkName: "testform" */ './views/TestForm.vue'),
             meta: { requiresAuth: true },
+            component: () => import(/* webpackChunkName: "testform" */ './views/TestForm.vue'),
+            
         },
         {
             path: '/about',

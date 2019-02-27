@@ -30,7 +30,7 @@ export default Vue.extend({
             email: "",
             password: "",
             confirmPassword: "",
-            errors: { error: [] } as IErrors | null
+            errors: null as IErrors | null
         };
     },
     computed: {
@@ -61,7 +61,7 @@ export default Vue.extend({
                         typeof error.data === "string" ||
                         error.data instanceof String
                     ) {
-                        this.errors = { error: [error.data] };
+                        this.errors = { error: error.data };
                     } else {
                         this.errors = error.data;
                     }

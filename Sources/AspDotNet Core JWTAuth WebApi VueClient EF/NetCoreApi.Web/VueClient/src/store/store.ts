@@ -28,19 +28,21 @@ export default new Vuex.Store({
                 new Date(state.auth.access_token_expiration) > new Date()
             );
         },
+
+        loggedInUser: (state: IAuthState) => (state.auth as IToken).userName,
     },
     mutations: {
         SHOW_AUTH_MODAL: (state: IAuthState) => state.showAuthModal = true,
 
         HIDE_AUTH_MODAL: (state: IAuthState) => state.showAuthModal = false,
 
-        REQUEST_LOGIN: (state: IAuthState) => state.loading = true,
+        LOGIN_REQUEST: (state: IAuthState) => state.loading = true,
 
         LOGIN_ERROR: (state: IAuthState) => state.loading = false,
 
         REGISTER_REQUEST: (state: IAuthState) => state.loading = true,
 
-        REGISTER_REQUEST_SUCCESS: (state: IAuthState) => state.loading = false,
+        REGISTER_SUCCESS: (state: IAuthState) => state.loading = false,
 
         REGISTER_ERROR: (state: IAuthState) => state.loading = false,
 

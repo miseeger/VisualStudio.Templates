@@ -5,7 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome';
 
 import { faCog, faSpinner, faCircleNotch, faHome, faListAlt,
-         faFileAlt, faInfoCircle, faRedo } from '@fortawesome/free-solid-svg-icons';
+         faFileAlt, faInfoCircle, faRedo, faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
     faSpinner,
@@ -16,6 +16,8 @@ library.add(
     faFileAlt,
     faInfoCircle,
     faRedo,
+    faUser,
+    faSignOutAlt
 );
 
 export {library as IconLibrary, FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText};
