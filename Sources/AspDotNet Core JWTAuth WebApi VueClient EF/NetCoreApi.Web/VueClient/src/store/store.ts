@@ -29,7 +29,10 @@ export default new Vuex.Store({
             );
         },
 
-        loggedInUser: (state: IAuthState) => (state.auth as IToken).userName,
+        loggedInUser: (state: IAuthState) => {
+            let auth = (state.auth as IToken);
+            return auth !== null ? auth.userName : "";
+        },
     },
     mutations: {
         SHOW_AUTH_MODAL: (state: IAuthState) => state.showAuthModal = true,
