@@ -9,6 +9,7 @@
         <b-alert
             variant="success"
             :show="registered && error === null"
+            dismissible
         >Registration successful. Please login to continue.</b-alert>
         <p>Login with your e-mail address and password.</p>
         <b-form-group label="E-mail">

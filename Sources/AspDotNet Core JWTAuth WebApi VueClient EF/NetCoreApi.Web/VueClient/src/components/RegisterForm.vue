@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="submit" class="p-2">
         <b-alert variant="danger" :show="errors !== null" dismissible @dismissed="errors = null">
-            <div v-for="(error, index) in errors" :key="index">{{ error[0] }}</div>
+            <div v-for="(error, index) in errors" :key="index"><font-awesome-icon icon="exclamation-triangle" :style="{ color: 'darkred' }"/>&nbsp;{{ error }}</div>
         </b-alert>
         <b-form-group label="E-mail">
             <b-form-input v-model.trim="email"/>
@@ -41,9 +41,9 @@ export default Vue.extend({
     methods: {
         submit() {
             const payload = {
-                email: this.email,
-                password: this.password,
-                confirmPassword: this.confirmPassword
+                Email: this.email,
+                Password: this.password,
+                ConfirmPassword: this.confirmPassword
             };
 
             this.$store
@@ -57,6 +57,7 @@ export default Vue.extend({
                     this.$emit("success");
                 })
                 .catch(error => {
+                    console.log(error.data);
                     if (
                         typeof error.data === "string" ||
                         error.data instanceof String

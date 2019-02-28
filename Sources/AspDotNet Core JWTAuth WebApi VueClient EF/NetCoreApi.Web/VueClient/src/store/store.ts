@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import { IToken } from '../interfaces/IToken';
-import { IAuthState } from '../interfaces/IAuthState';
+import { IToken } from '@/interfaces/IToken';
+import { IAuthState } from '@/interfaces/IAuthState';
 import { ILoginPayload } from '@/interfaces/ILoginPayLoad';
 import { IRegisterPayload } from '@/interfaces/IRegisterPayload';
 import Axios from 'axios';
@@ -78,9 +78,10 @@ export default new Vuex.Store({
 
         register: ({ commit }: { [key: string]: any }, payload: IRegisterPayload) =>
             new Promise((resolve, reject) => {
+                payload.Username = payload.Email.split('@')[0];
                 commit('REGISTER_REQUEST');
                 Axios
-                    .post('api/account', payload)
+                    .post('api/account/register', payload)
                     .then(response => {
                         commit('REGISTER_SUCCESS');
                         resolve(response);
