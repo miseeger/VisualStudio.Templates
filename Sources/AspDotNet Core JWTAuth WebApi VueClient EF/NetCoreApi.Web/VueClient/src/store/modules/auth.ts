@@ -4,6 +4,8 @@ import { IToken } from '../../interfaces/IToken';
 import { IAuthState } from '../../interfaces/IAuthState';
 import { ILoginPayload } from '@/interfaces/ILoginPayLoad';
 import { IRegisterPayload } from '@/interfaces/IRegisterPayload';
+import { PlainObject } from '@/types/PlainObject'
+
 import Axios from 'axios';
 
 export const state: IAuthState = {
@@ -50,7 +52,7 @@ export const getters = {
 // https://basarat.gitbooks.io/typescript/content/docs/destructuring.html
 
 export const actions = {
-    login: ({ commit }: { [key: string]: any }, payload: ILoginPayload) =>
+    login: ({ commit }: PlainObject, payload: ILoginPayload) =>
         new Promise((resolve, reject) => {
             commit('LOGIN_REQUEST');
             Axios
@@ -69,7 +71,7 @@ export const actions = {
                 });
         }),
 
-    register: ({ commit }: { [key: string]: any }, payload: IRegisterPayload) => 
+    register: ({ commit }: PlainObject, payload: IRegisterPayload) => 
         new Promise((resolve, reject) => {
             commit('REGISTER_REQUEST');
             Axios
@@ -84,7 +86,7 @@ export const actions = {
                 });
         }),
     
-    logout: ({ commit }: { [key: string]: any }) => {
+    logout: ({ commit }: PlainObject) => {
         commit('LOGOUT');
         delete Axios.defaults.headers.common["Authorization"];
     }

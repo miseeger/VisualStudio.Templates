@@ -31,8 +31,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import AuthNavItem from "./components/AuthNavItem";
-import AuthModal from "./components/AuthModal";
+import AuthNavItem from "./components/AuthNavItem.vue";
+import AuthModal from "./components/AuthModal.vue";
 
 export default Vue.extend({
     name: "app",
