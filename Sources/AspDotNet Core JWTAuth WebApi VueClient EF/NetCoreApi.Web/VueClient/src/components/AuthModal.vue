@@ -40,7 +40,7 @@ export default Vue.extend({
             this.index = 0;
         },
         close() {
-            this.$store.commit("HIDE_AUTH_MODAL");
+            this.$store.commit("auth/HIDE_AUTH_MODAL");
             let query = Object.assign({}, this.$route.query);
             delete query.redirect;
             this.$router.push({ query: query });

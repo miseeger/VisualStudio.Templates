@@ -6,7 +6,7 @@ import * as auth from '@/store/modules/auth';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules: {
-        auth,
-    },
+     modules: {
+         auth: auth,
+    } as any,
 });

@@ -4,9 +4,11 @@ import { IToken } from '../../interfaces/IToken';
 import { IAuthState } from '../../interfaces/IAuthState';
 import { ILoginPayload } from '@/interfaces/ILoginPayLoad';
 import { IRegisterPayload } from '@/interfaces/IRegisterPayload';
-import { PlainObject } from '@/types/PlainObject'
+import { PlainObject } from '@/typings/PlainObject'
 
 import Axios from 'axios';
+
+export const namespaced = true;
 
 export const state: IAuthState = {
     auth: null,
@@ -19,22 +21,22 @@ export const mutations = {
 
     HIDE_AUTH_MODAL: (state: IAuthState) => state.showAuthModal = false,
 
-    REQUEST_LOGIN: (state: IAuthState) => state.loading = true,
+    LOGIN_REQUEST: (state: IAuthState) => state.loading = true,
+
+    LOGIN_SUCCESS: (state: IAuthState, payload: IToken) => {
+        state.auth = payload;
+        state.loading = false;
+    },    
 
     LOGIN_ERROR: (state: IAuthState) => state.loading = false,
 
     REGISTER_REQUEST: (state: IAuthState) => state.loading = true,
 
-    REGISTER_REQUEST_SUCCESS: (state: IAuthState) => state.loading = false,
+    REGISTER_SUCCESS: (state: IAuthState) => state.loading = false,
 
     REGISTER_ERROR: (state: IAuthState) => state.loading = false,
 
     LOGOUT: (state: IAuthState) => state.auth = null,
-
-    LOGIN_SUCCESS: (state: IAuthState, payload: IToken) => {
-        state.auth = payload;
-        state.loading = false;
-    },
 };
 
 export const getters = {
@@ -45,6 +47,9 @@ export const getters = {
             new Date(state.auth.access_token_expiration) > new Date()
         );
     },
+    loggedInUser: (state: IAuthState) => {
+        return state.auth === null ? "" : state.auth.userName;
+    }
 };
 
 // https://medium.com/front-end-weekly/typescript-error-ts7031-makes-me-go-huh-c81cf76c829b
@@ -75,7 +80,7 @@ export const actions = {
         new Promise((resolve, reject) => {
             commit('REGISTER_REQUEST');
             Axios
-                .post('api/account', payload)
+                .post('api/account/register', payload)
                 .then(response => {
                     commit('REGISTER_SUCCESS');
                     resolve(response);

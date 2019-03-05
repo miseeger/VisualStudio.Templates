@@ -19,14 +19,15 @@
             <b-form-input v-model.trim="password" type="password"/>
         </b-form-group>
         <b-form-group>
-            <b-button variant="primary" type="submit" :disabled="loading">Login</b-button>
-            <b-button variant="default" @click="close" :disabled="loading">Cancel</b-button>
+            <b-button variant="primary" type="submit" :disabled="auth.loading">Login</b-button>
+            <b-button variant="default" @click="close" :disabled="auth.loading">Cancel</b-button>
         </b-form-group>
     </form>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import { mapState } from "vuex";
 import { IErrors } from '@/interfaces/IErrors';
 
 export default Vue.extend({
@@ -45,9 +46,7 @@ export default Vue.extend({
         };
     },
     computed: {
-        loading(): boolean {
-            return this.$store.state.loading;
-        }
+        ...mapState(['auth']),
     },
     methods: {
         login() {
@@ -57,7 +56,7 @@ export default Vue.extend({
             };
 
             this.$store
-                .dispatch("login", payload)
+                .dispatch("auth/login", payload)
                 .then(response => {
                     this.error = null;
                     this.email = "";

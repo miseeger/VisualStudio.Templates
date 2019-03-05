@@ -30,13 +30,15 @@ const router = new Router({
     ],
 });
 
+// https://stackoverflow.com/questions/46908306/vuex-accessing-namespaced-module-getters-in-vue-router
+
 router.beforeEach((to, from, next) => {
     if (to.matched.some(route => route.meta.requiresAuth))
     {
-        if (!store.getters.isAuthenticated)
+        if (!store.getters['auth/isAuthenticated'])
         {
             console.log(`Auth needed! ${from.path}, ${to.path}`);
-            store.commit("SHOW_AUTH_MODAL");
+            store.commit("auth/SHOW_AUTH_MODAL");
             next({ path: from.path, query: { redirect: to.path } });
         } else
         {

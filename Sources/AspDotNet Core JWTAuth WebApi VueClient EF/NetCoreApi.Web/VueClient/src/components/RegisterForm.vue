@@ -13,14 +13,15 @@
             <b-form-input v-model.trim="confirmPassword" type="password"/>
         </b-form-group>
         <b-form-group>
-            <b-button variant="primary" type="submit" :disabled="loading">Register</b-button>
-            <b-button variant="default" @click="close" :disabled="loading">Cancel</b-button>
+            <b-button variant="primary" type="submit" :disabled="auth.loading">Register</b-button>
+            <b-button variant="default" @click="close" :disabled="auth.loading">Cancel</b-button>
         </b-form-group>
     </form>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import { mapState } from "vuex";
 import { IErrors } from "@/interfaces/IErrors";
 
 export default Vue.extend({
@@ -34,9 +35,7 @@ export default Vue.extend({
         };
     },
     computed: {
-        loading(): boolean {
-            return this.$store.state.loading;
-        }
+        ...mapState(['auth']),
     },
     methods: {
         submit() {
@@ -47,7 +46,7 @@ export default Vue.extend({
             };
 
             this.$store
-                .dispatch("register", payload)
+                .dispatch("auth/register", payload)
                 .then(response => {
                     this.errors = null;
                     this.email = "";

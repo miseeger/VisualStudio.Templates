@@ -4,7 +4,6 @@ namespace $safeprojectname$.Data.ViewModels
 {
     public class RegisterViewModel
     {
-        [Required]
         public string Username { get; set; }
     
         [Required]

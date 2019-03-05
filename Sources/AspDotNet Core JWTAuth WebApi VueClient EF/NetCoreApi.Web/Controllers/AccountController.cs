@@ -33,7 +33,7 @@ namespace $safeprojectname$.Controllers
 
             user = new IdentityUser
             {
-                UserName = model.Username,
+                UserName = model.Email.Split("@").FirstOrDefault(),
                 Email = model.Email,
                 EmailConfirmed = true,
                 LockoutEnabled = true

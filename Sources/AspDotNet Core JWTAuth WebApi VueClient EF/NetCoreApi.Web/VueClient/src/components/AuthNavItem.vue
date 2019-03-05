@@ -17,23 +17,19 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { mapGetters } from "vuex";
 
 export default Vue.extend({
     name: "auth-nav-item",
     computed: {
-        isAuthenticated(): boolean {
-            return this.$store.getters.isAuthenticated;
-        },
-        loggedInUser(): string {
-            return this.$store.getters.loggedInUser;
-        }
+        ...mapGetters('auth', ['isAuthenticated', 'loggedInUser']),
     },
     methods: {
         login() {
-            this.$store.commit("SHOW_AUTH_MODAL");
+            this.$store.commit("auth/SHOW_AUTH_MODAL");
         },
         logout() {
-            this.$store.dispatch("logout").then(() => {
+            this.$store.dispatch("auth/logout").then(() => {
                 if (this.$route.meta.requiresAuth) {
                     this.$router.push("/");
                 }

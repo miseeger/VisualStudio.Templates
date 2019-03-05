@@ -42,7 +42,7 @@ export default Vue.extend({
     },
     computed: {
         showAuthModal(): void {
-            return this.$store.state.showAuthModal;
+            return this.$store.state.auth.showAuthModal;
         }
     }
 });
