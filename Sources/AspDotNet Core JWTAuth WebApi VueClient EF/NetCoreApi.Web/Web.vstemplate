@@ -100,6 +100,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="auth.ts">auth.ts</ProjectItem>
       </Folder>	  	  
       <Folder Name="VueClient\src\typings" TargetFolderName="VueClient\src\typings">
+		<ProjectItem ReplaceParameters="true" TargetFileName="PlainObject.ts">PlainObject.ts</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="vue-form-generator.d.ts">vue-form-generator.d.ts</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="vue-toastr.d.ts">vue-toastr.d.ts</ProjectItem>
       </Folder>

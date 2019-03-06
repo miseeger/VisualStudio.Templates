@@ -2,11 +2,17 @@
 using Newtonsoft.Json;
 using $ext_safeprojectname$.Core.Data.Manager;
 using $ext_safeprojectname$.Core.Data.Repositories;
-
-namespace $safeprojectname$.Configurations
+using $ext_safeprojectname$.Core.Services;
+using WebAPICore5.Core.Services;
 {
     public static class ServicesConfiguration
     {
+        public static IServiceCollection ConfigureCoreServices(this IServiceCollection services)
+	{
+            services.AddTransient<IEmailSender, SmtpMailer>();
+
+	    return services;
+	}
         public static IServiceCollection ConfigureRepositories(this IServiceCollection services)
         {
             services.AddScoped<IAlbumRepository, AlbumRepository>()
