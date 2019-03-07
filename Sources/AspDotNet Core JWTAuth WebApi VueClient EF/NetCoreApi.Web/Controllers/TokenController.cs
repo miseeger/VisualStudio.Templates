@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using $ext_safeprojectname$.Core.Data.ViewModels;
+using $ext_safeprojectname$.Core.Data.ApiModels;
 using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
 namespace $safeprojectname$.Controllers
@@ -29,7 +29,7 @@ namespace $safeprojectname$.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> GetToken([FromBody] LoginViewModel model)
+        public async Task<IActionResult> GetToken([FromBody] LoginApiModel model)
         {
             var errorMessage = "Invalid e-mail address and/or password.";
 
@@ -61,7 +61,7 @@ namespace $safeprojectname$.Controllers
             return Ok(token);
         }
 
-        private async Task<TokenViewModel> GenerateToken(IdentityUser user)
+        private async Task<TokenApiModel> GenerateToken(IdentityUser user)
         {
             var claims = new List<Claim>
             {
@@ -90,7 +90,7 @@ namespace $safeprojectname$.Controllers
                 signingCredentials: creds
             );
 
-            return new TokenViewModel
+            return new TokenApiModel
             {
                 AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
                 AccessTokenExpiration = expires,
