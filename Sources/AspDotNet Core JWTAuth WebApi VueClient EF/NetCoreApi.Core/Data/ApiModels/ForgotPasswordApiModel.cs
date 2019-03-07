@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace $safeprojectname$.Core.Data.ViewModels
+namespace $safeprojectname$.Data.ApiModels
 {
-    public class ForgotPasswordViewModel
+    public class ForgotPasswordApiModel
     {
         [Required]
         [EmailAddress]

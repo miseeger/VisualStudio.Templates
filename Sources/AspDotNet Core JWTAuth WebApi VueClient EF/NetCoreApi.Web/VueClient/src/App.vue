@@ -26,6 +26,7 @@
         </transition>
 
         <auth-modal :show="showAuthModal"/>
+        <password-forgot-modal :show="showForgotPasswordModal"/>
     </div>
 </template>
 
@@ -33,17 +34,23 @@
 import Vue from "vue";
 import AuthNavItem from "./components/AuthNavItem.vue";
 import AuthModal from "./components/AuthModal.vue";
+import PasswordForgotModal from "./components/ForgotPasswordModal.vue";
 
 export default Vue.extend({
     name: "app",
     components: {
         AuthNavItem,
-        AuthModal
+        AuthModal,
+        PasswordForgotModal
     },
     computed: {
         showAuthModal(): void {
             return this.$store.state.auth.showAuthModal;
+        },
+        showForgotPasswordModal(): void {
+            return this.$store.state.auth.showForgotPasswordModal;
         }
+
     }
 });
 </script>

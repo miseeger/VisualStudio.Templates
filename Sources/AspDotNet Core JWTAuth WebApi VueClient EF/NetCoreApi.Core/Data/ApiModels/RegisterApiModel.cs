@@ -1,15 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace $safeprojectname$.Core.Data.ViewModels
+namespace $safeprojectname$.Data.ApiModels
 {
-    public class ResetPasswordViewModel
+    public class RegisterApiModel
     {
+        public string Username { get; set; }
+
         [Required]
         [EmailAddress]
         public string Email { get; set; }
-
-        [Required]
-        public string Code { get; set; }
 
         [Required]
         public string Password { get; set; }

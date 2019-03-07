@@ -20,6 +20,13 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="DataContext.cs">DataContext.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="DataContextExtensions.cs">DataContextExtensions.cs</ProjectItem>
       </Folder>
+      <Folder Name="Data\ApiModels" TargetFolderName="Data\ApiModels">
+		<ProjectItem ReplaceParameters="true" TargetFileName="ForgotPasswordApiModel.cs">ForgotPasswordApiModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="LoginApiModel.cs">LoginApiModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RegisterApiModel.cs">RegisterApiModel.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="ResetPasswordApiModel.cs">ResetPasswordApiModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TokenApiModel.cs">TokenApiModel.cs</ProjectItem>
+      </Folder>	  
       <Folder Name="Data\Configurations" TargetFolderName="Data\Configurations">
         <ProjectItem ReplaceParameters="true" TargetFileName="AlbumConfiguration.cs">AlbumConfiguration.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ArtistConfiguration.cs">ArtistConfiguration.cs</ProjectItem>

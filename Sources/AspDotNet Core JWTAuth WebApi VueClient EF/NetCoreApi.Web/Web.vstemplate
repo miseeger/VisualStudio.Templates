@@ -79,6 +79,8 @@
       <Folder Name="VueClient\src\components" TargetFolderName="VueClient\src\components">
 		<ProjectItem ReplaceParameters="true" TargetFileName="AuthModal.vue">AuthModal.vue</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="AuthNavItem.vue">AuthNavItem.vue</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="ForgotPasswordForm.vue">ForgotPasswordForm.vue</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="ForgotPasswordModal.vue">ForgotPasswordModal.vue</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="HelloWorld.vue">HelloWorld.vue</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="LoginForm.vue">LoginForm.vue</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="RegisterForm.vue">RegisterForm.vue</ProjectItem>
@@ -86,12 +88,15 @@
       <Folder Name="VueClient\src\interfaces" TargetFolderName="VueClient\src\interfaces">
         <ProjectItem ReplaceParameters="true" TargetFileName="IAuthState.ts">IAuthState.ts</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="IErrors.ts">IErrors.ts</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="IForgotPasswordPayload.ts">IForgotPasswordPayload.ts</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="ILoginPayload.ts">ILoginPayload.ts</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="IRegisterPayload.ts">IRegisterPayload.ts</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="IResetPasswordPayload.ts">IResetPasswordPayload.ts</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="IToken.ts">IToken.ts</ProjectItem>
       </Folder>
       <Folder Name="VueClient\src\services" TargetFolderName="VueClient\src\services">
         <ProjectItem ReplaceParameters="true" TargetFileName="AlbumService.ts">AlbumService.ts</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="AuthService.ts">AuthService.ts</ProjectItem>
       </Folder>
       <Folder Name="VueClient\src\store" TargetFolderName="VueClient\src\store">
         <ProjectItem ReplaceParameters="true" TargetFileName="store.ts">store.ts</ProjectItem>

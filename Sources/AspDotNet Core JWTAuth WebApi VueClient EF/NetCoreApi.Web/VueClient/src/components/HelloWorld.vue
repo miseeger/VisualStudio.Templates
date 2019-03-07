@@ -1,6 +1,9 @@
 <template>
     <div class="hello">
-        <h1>{{ msg }}</h1>
+        <h2>{{ msg }}</h2>
+        <p>
+            This welcome page was made with plain Boostrap 4 - The auth dialogs and pages are made with Boostrap Vue.
+        </p>
         <div class="row justify-content-md-center">
             <div class="col-md-6">
                 <div>&nbsp;</div>
@@ -133,6 +136,7 @@ export default Vue.extend({
     methods: {
         loadRandomAlbum(): void {
             this.loading = true;
+
             AlbumService.getAlbumById(Math.floor(Math.random() * 256)).then(
                 response => {
                     this.album = response.data;

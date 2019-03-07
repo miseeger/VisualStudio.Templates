@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
-using $ext_safeprojectname$.Core.Data.ViewModels;
+using $ext_safeprojectname$.Core.Data.ApiModels;
 
 namespace $safeprojectname$.Controllers
 {
@@ -23,7 +23,7 @@ namespace $safeprojectname$.Controllers
 
         [HttpPost]
         [Route("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterViewModel model)
+        public async Task<IActionResult> Register([FromBody] RegisterApiModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -73,7 +73,7 @@ namespace $safeprojectname$.Controllers
 
         [HttpPost]
         [Route("forgotpassword")]
-        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordViewModel model)
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordApiModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -103,7 +103,7 @@ namespace $safeprojectname$.Controllers
 
         [HttpPost]
         [Route("resetpassword")]
-        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordViewModel model)
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordApiModel model)
         {
             if (!ModelState.IsValid)
             {
