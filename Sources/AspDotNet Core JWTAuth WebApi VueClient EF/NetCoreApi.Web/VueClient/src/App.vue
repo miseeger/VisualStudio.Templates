@@ -81,6 +81,10 @@ export default Vue.extend({
     text-align: center;
 }
 
+.resetpw {
+    text-align: center;
+}
+
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.3s ease-in-out;

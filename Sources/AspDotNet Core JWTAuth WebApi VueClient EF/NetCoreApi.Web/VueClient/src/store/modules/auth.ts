@@ -1,16 +1,14 @@
 // https://codeburst.io/vuex-and-typescript-3427ba78cfa8
 
-import Axios from 'axios';
+import { IToken } from "../../interfaces/IToken";
+import { IAuthState } from "../../interfaces/IAuthState";
+import { ILoginPayload } from "@/interfaces/ILoginPayLoad";
+import { IRegisterPayload } from "@/interfaces/IRegisterPayload";
+import { PlainObject } from "@/typings/PlainObject";
 
-import { IToken } from '../../interfaces/IToken';
-import { IAuthState } from '../../interfaces/IAuthState';
-import { ILoginPayload } from '@/interfaces/ILoginPayLoad';
-import { IRegisterPayload } from '@/interfaces/IRegisterPayload';
-import { PlainObject } from '@/typings/PlainObject'
+import Axios from "axios";
 import { IForgotPasswordPayload } from "@/interfaces/IForgotPasswordPayload";
 import { IResetPasswordPayload } from "@/interfaces/IResetPasswordPayload";
-
-import AuthService from '@/services/AuthService';
 
 export const namespaced = true;
 
@@ -73,43 +71,28 @@ export const getters = {
 export const actions = {
     login: ({ commit }: PlainObject, payload: ILoginPayload) =>
         new Promise((resolve, reject) => {
-            commit('REQUEST_START');
-
-            AuthService.login(payload)
-                .then((response) => {
+            commit("REQUEST_START");
+            Axios.post("api/token", payload)
+                .then(response => {
                     const authToken: IToken = response.data;
-                    AuthService.setAuthHeader(authToken.access_token);
-                    commit('LOGIN_SUCCESS', authToken);
-                    commit('HIDE_AUTH_MODAL');
+                    Axios.defaults.headers.common["Authorization"] = `Bearer ${
+                        authToken.access_token
+                    }`;
+                    commit("LOGIN_SUCCESS", authToken);
+                    commit("HIDE_AUTH_MODAL");
                     resolve(response);
                 })
-                .catch((error) => {
-                    AuthService.deleteAuthHeader();
-                    commit('REQUEST_ERROR');
+                .catch(error => {
+                    commit("REQUEST_ERROR");
+                    delete Axios.defaults.headers.common["Authorization"];
                     reject(error.response);
                 });
         }),
 
-    register: ({ commit }: PlainObject, payload: IRegisterPayload) => 
-        new Promise((resolve, reject) => {
-            commit('REQUEST_START');
-
-            AuthService.register(payload)
-                .then(response => {
-                    commit('REQUEST_SUCCESS');
-                    resolve(response);
-                })
-                .catch(error => {
-                    commit('REQUEST_ERROR');
-                    reject(error.response);
-                });            
-        }),
-
-    forgotPassword: ({ commit }: PlainObject, payload: IForgotPasswordPayload) =>
+    register: ({ commit }: PlainObject, payload: IRegisterPayload) =>
         new Promise((resolve, reject) => {
             commit("REQUEST_START");
-
-            AuthService.forgotPassword(payload)
+            Axios.post("api/account/register", payload)
                 .then(response => {
                     commit("REQUEST_SUCCESS");
                     resolve(response);
@@ -118,10 +101,38 @@ export const actions = {
                     commit("REQUEST_ERROR");
                     reject(error.response);
                 });
-        }),        
-    
+        }),
+
+    forgotPassword: ({ commit }: PlainObject, payload: IForgotPasswordPayload) =>
+        new Promise((resolve, reject) => {
+            commit("REQUEST_START");
+            Axios.post("api/account/forgotpassword", payload)
+                .then(response => {
+                    commit("REQUEST_SUCCESS");
+                    resolve(response);
+                })
+                .catch(error => {
+                    commit("REQUEST_ERROR");
+                    reject(error.response);
+                });
+        }),
+
+        resetPassword: ({ commit }: PlainObject, payload: IResetPasswordPayload) =>
+            new Promise((resolve, reject) => {
+                commit("REQUEST_START");
+                Axios.post("api/account/resetpassword", payload)
+                    .then(response => {
+                        commit("REQUEST_SUCCESS");
+                        resolve(response);
+                    })
+                    .catch(error => {
+                        commit("REQUEST_ERROR");
+                        reject(error.response);
+                    });
+            }),        
+
     logout: ({ commit }: PlainObject) => {
-        commit('LOGOUT');
-        AuthService.deleteAuthHeader();
+        commit("LOGOUT");
+        delete Axios.defaults.headers.common["Authorization"];
     }
 };

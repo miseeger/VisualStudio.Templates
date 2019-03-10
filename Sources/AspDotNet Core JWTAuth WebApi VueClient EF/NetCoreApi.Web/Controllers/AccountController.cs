@@ -91,7 +91,7 @@ namespace $safeprojectname$.Controllers
             var code = await _userManager.GeneratePasswordResetTokenAsync(user);
 
             var callbackUrl =
-                $"{Request.Scheme}://{Request.Host}/resetpassword?code={code}";
+              $"{Request.Scheme}://{Request.Host}/#/resetpassword?email={model.Email}&code={code}";
 
             await _smtpMailer.SendEmailAsync(
                 model.Email,
@@ -107,7 +107,17 @@ namespace $safeprojectname$.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                var errorList = new List<string>();
+
+                foreach (var modelState in ViewData.ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        errorList.Add(error.ErrorMessage.Replace("\"", string.Empty));
+                    }
+                }
+
+                return BadRequest(errorList);
             }
 
             var user = await _userManager.FindByEmailAsync(model.Email);
@@ -117,11 +127,18 @@ namespace $safeprojectname$.Controllers
                 return BadRequest();
             }
 
-            var resetResult = await _userManager.ResetPasswordAsync(user, model.Code, model.Password);
+            // https://stackoverflow.com/questions/27241658/token-invalid-on-reset-password-with-asp-net-identity
+            var code = model.Code.Replace(" ", "+");
+
+            var resetResult = await _userManager.ResetPasswordAsync(user, code, model.Password);
 
             if (!resetResult.Succeeded)
             {
-                return BadRequest(resetResult.Errors);
+                var result = resetResult.Errors;
+
+                return resetResult.Errors.Count() == 1
+                    ? BadRequest(resetResult.Errors.First().Description)
+                    : BadRequest(resetResult.Errors.Select(err => err.Description).ToArray());
             }
 
             return Ok();

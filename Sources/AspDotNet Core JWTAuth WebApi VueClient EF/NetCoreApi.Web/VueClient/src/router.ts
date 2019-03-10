@@ -16,8 +16,18 @@ const router = new Router({
             path: '/testform',
             name: 'testform',
             meta: { requiresAuth: true },
-            component: () => import(/* webpackChunkName: "testform" */ './views/TestForm.vue'),
+            component: () => import('./views/TestForm.vue'),
             
+        },
+        {
+            path: '/resetpassword',
+            name: 'resetpassword',
+            component: () => import('./views/ResetPassword.vue'),
+        },        
+        {
+            path: '/resetpasswordsuccess',
+            name: 'resetpasswordsuccess',
+            component: () => import('./views/ResetPasswordSuccess.vue'),
         },
         {
             path: '/about',
