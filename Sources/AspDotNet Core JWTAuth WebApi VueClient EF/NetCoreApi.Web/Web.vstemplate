@@ -84,6 +84,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="HelloWorld.vue">HelloWorld.vue</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="LoginForm.vue">LoginForm.vue</ProjectItem>
 		<ProjectItem ReplaceParameters="true" TargetFileName="RegisterForm.vue">RegisterForm.vue</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="ResetPasswordForm.vue">ResetPasswordForm.vue</ProjectItem>
       </Folder>
       <Folder Name="VueClient\src\interfaces" TargetFolderName="VueClient\src\interfaces">
         <ProjectItem ReplaceParameters="true" TargetFileName="IAuthState.ts">IAuthState.ts</ProjectItem>
@@ -115,6 +116,8 @@
       <Folder Name="VueClient\src\views" TargetFolderName="VueClient\src\views">
         <ProjectItem ReplaceParameters="true" TargetFileName="About.vue">About.vue</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Home.vue">Home.vue</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ResetPassword.vue">ResetPassword.vue</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ResetPasswordSuccess.vue">ResetPasswordSuccess.vue</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="TestForm.vue">TestForm.vue</ProjectItem>
       </Folder>  
       <Folder Name="VueClient\tests\e2e\plugins" TargetFolderName="VueClient\tests\e2e\plugins">

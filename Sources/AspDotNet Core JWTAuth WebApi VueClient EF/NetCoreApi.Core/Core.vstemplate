@@ -110,17 +110,12 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="ArtistViewModel.cs">ArtistViewModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="CustomerViewModel.cs">CustomerViewModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="EmployeeViewModel.cs">EmployeeViewModel.cs</ProjectItem>
-		<ProjectItem ReplaceParameters="true" TargetFileName="ForgotPasswordViewModel.cs">ForgotPasswordViewModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="GenreViewModel.cs">GenreViewModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="InvoiceViewModel.cs">InvoiceViewModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="InvoiceLineViewModel.cs">InvoiceLineViewModel.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="LoginViewModel.cs">LoginViewModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="MediaTypeViewModel.cs">MediaTypeViewModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="PlaylistViewModel.cs">PlaylistViewModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="PlaylistTrackViewModel.cs">PlaylistTrackViewModel.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="RegisterViewModel.cs">RegisterViewModel.cs</ProjectItem>
-		<ProjectItem ReplaceParameters="true" TargetFileName="ResetPasswordViewModel.cs">ResetPasswordViewModel.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="TokenViewModel.cs">TokenViewModel.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="TrackViewModel.cs">TrackViewModel.cs</ProjectItem>
       </Folder>
       <Folder Name="Services" TargetFolderName="Services">

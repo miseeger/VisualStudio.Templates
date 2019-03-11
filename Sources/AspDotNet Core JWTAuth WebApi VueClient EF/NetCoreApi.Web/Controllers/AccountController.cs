@@ -77,14 +77,26 @@ namespace $safeprojectname$.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                // brief neutral message:
+                return BadRequest("Something went wrong while processing your request.");
+
+                // or ...
+
+                // no comment:
+                //return Ok();
             }
 
             var user = await _userManager.FindByEmailAsync(model.Email);
 
             if (user == null)
             {
-                return BadRequest();
+                // brief neutral message:
+                // return BadRequest("Something went wrong while processing your request.");
+
+                // or ...
+
+                // no comment when user not found:
+                return Ok();
             }
 
             // https://go.microsoft.com/fwlink/?LinkID=532713

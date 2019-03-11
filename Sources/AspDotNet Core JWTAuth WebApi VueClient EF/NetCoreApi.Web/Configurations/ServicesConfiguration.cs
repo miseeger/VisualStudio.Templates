@@ -1,9 +1,11 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using $ext_safeprojectname$.Core.Data.Manager;
 using $ext_safeprojectname$.Core.Data.Repositories;
 using $ext_safeprojectname$.Core.Services;
-using WebAPICore5.Core.Services;
+
+namespace $safeprojectname$.Configurations
 {
     public static class ServicesConfiguration
     {

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.UI.Services;
 
-namespace $safeprojectname$.Core.Services
+namespace $safeprojectname$.Services
 
 {
     public class SmtpMailer : IEmailSender

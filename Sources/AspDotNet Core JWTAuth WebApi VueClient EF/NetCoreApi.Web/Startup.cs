@@ -39,6 +39,8 @@ namespace $safeprojectname$
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureCoreServices();
+
             // Caching
             //services.AddMemoryCache();
             //services.AddResponseCaching();
