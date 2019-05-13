@@ -1,0 +1,49 @@
+{
+  "name": "VueClient",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.13",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7",
+    "register-service-worker": "^1.6.2",
+    "vue": "^2.6.9",
+    "vue-class-component": "^7.0.1",
+    "vue-form-generator": "^2.3.4",
+    "vue-property-decorator": "^8.0.0",
+    "vue-router": "^3.0.2",
+    "vue-toastr": "^2.0.16",
+    "vuex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@aspnet/signalr": "^1.1.4",
+    "@types/jest": "^24.0.11",
+    "@vue/cli-plugin-babel": "^3.5.1",
+    "@vue/cli-plugin-e2e-cypress": "^3.5.1",
+    "@vue/cli-plugin-pwa": "^3.5.1",
+    "@vue/cli-plugin-typescript": "^3.5.1",
+    "@vue/cli-plugin-unit-jest": "^3.5.1",
+    "@vue/cli-service": "^3.5.1",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "aspnet-webpack": "^3.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333",
+    "vue-template-compiler": "^2.6.9",
+    "webpack-hot-middleware": "^2.24.3"
+  }
+}
