@@ -1,0 +1,46 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>NgWebApp.Core</Name>
+    <Description>Core functionality for an ASP.NET API Core application</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <Icon>__TemplateIcon.ico</Icon>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>NgWebApp.CoreLib</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>NgWebApp.Core</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <!-- <LocationField>Enabled</LocationField> -->
+    <!-- <EnableLocationBrowseButton>true</EnableLocationBrowseButton> -->
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.Core.csproj" File="NgWebApp.Core.csproj" ReplaceParameters="true">
+      <Folder Name="Data" TargetFolderName="Data">
+          <Folder Name="Interface" TargetFolderName="Interface">
+            <ProjectItem ReplaceParameters="true" TargetFileName="IDataService.cs">IDataService.cs</ProjectItem>
+          </Folder>
+          <Folder Name="Mapping" TargetFolderName="Mapping">
+            <ProjectItem ReplaceParameters="true" TargetFileName="CostumerMapping.cs">CostumerMapping.cs</ProjectItem>
+          </Folder>
+          <Folder Name="Model" TargetFolderName="Model">
+            <ProjectItem ReplaceParameters="true" TargetFileName="Costumer.cs">Costumer.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecast.cs">WeatherForecast.cs</ProjectItem>            
+          </Folder>          
+          <ProjectItem ReplaceParameters="true" TargetFileName="DataService.cs">DataService.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="DataServiceConfig.cs">DataServiceConfig.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="DataServiceInterceptors.cs">DataServiceInterceptors.cs</ProjectItem>
+      </Folder>    
+      <Folder Name="Interface" TargetFolderName="Interface">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ICustomerService.cs">ICustomerService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IMailerService.cs">IMailerService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IWeatherForecastService.cs">IWeatherForecastService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Service" TargetFolderName="Service">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CustomerService.cs">CustomerService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MailerService.cs">MailerService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecastService.cs">WeatherForecastService.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
