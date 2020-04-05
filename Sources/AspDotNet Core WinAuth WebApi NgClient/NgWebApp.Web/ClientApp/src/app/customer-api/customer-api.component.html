@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Customers From Database</h1>
+
+<p>This component demonstrates fetching customer data from the database server using the WebAPI.</p>
+
+<p *ngIf="!customers"><em>Loading...</em></p>
+
+<table class="table table-striped" aria-labelledby="tableLabel" *ngIf="customers">
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Phone</th>
+      <th>Country</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.companyName }}</td>
+      <td>{{ customer.contactName }}</td>
+      <td>{{ customer.phone }}</td>
+      <td>{{ customer.country }}</td>
+      <td>{{ customer.region }}</td>
+    </tr>
+  </tbody>
+</table>

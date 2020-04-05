@@ -38,6 +38,10 @@
               <ProjectItem ReplaceParameters="true" TargetFileName="counter.component.spec.ts">counter.component.spec.ts</ProjectItem>
               <ProjectItem ReplaceParameters="true" TargetFileName="counter.component.ts">counter.component.ts</ProjectItem>
             </Folder>
+            <Folder Name="customer-api" TargetFolderName="customer-api">
+              <ProjectItem ReplaceParameters="true" TargetFileName="customer-api.component.html">customer-api.component.html</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="customer-api.component.ts">customer-api.component.ts</ProjectItem>
+            </Folder>                        
             <Folder Name="fetch-data" TargetFolderName="fetch-data">
               <ProjectItem ReplaceParameters="true" TargetFileName="fetch-data.component.html">fetch-data.component.html</ProjectItem>
               <ProjectItem ReplaceParameters="true" TargetFileName="fetch-data.component.ts">fetch-data.component.ts</ProjectItem>
