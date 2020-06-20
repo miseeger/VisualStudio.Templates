@@ -1,0 +1,69 @@
+<div class="p-grid viewcomponent">
+    <div class="p-col-12">
+        <h2>Customers</h2>
+        <p-table #dt [columns]="cols" [value]="customers" [scrollable]="true" scrollHeight="640px" dataKey="customerId">
+            <ng-template pTemplate="caption">
+        <div style="text-align: right">
+            <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+            <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+        </div>
+    </ng-template>
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th  style="width: 3em"></th>
+                    <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                        {{ col.header }}
+                        <p-sortIcon
+                            [field]="col.field"
+                            ariaLabel="Activate to sort"
+                            ariaLabelDesc="Activate to sort in descending order"
+                            ariaLabelAsc="Activate to sort in ascending order"
+                        ></p-sortIcon>
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-expanded="expanded" let-columns="columns">
+                <tr>
+                    <td  style="width: 3em">
+                        <a href="#" [pRowToggler]="rowData">
+                            <i [ngClass]="expanded ? 'fa fa-chevron-down' : 'fa fa-chevron-right'"></i>
+                        </a>
+                    </td>
+                    <td *ngFor="let col of columns">
+                        {{rowData[col.field]}}
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="rowexpansion" let-rowData let-columns="columns">
+                <tr>
+                    <td [attr.colspan]="columns.length + 1">
+                        <div class="p-grid -fluid" style="font-size:16px;padding:20px" [@rowExpansionTrigger]="'active'">
+                            <div class="p-col-12 p-md-3" style="text-align:center">
+                                <img [attr.alt]="rowData.brand" src="assets/img/addresscard.png">
+                            </div>
+                            <div class="p-col-12 p-md-9">
+                                <div class="p-grid">
+                                    <div class="p-col-12">
+                                        <b>Address:</b> {{rowData.address}}
+                                    </div>
+                                    <div class="p-col-12">
+                                        <b>ZIP / City:</b> {{rowData.plostalCode}} {{rowData.city}}
+                                    </div>
+                                    <div class="p-col-12">
+                                        <b>Country:</b> {{rowData.Country}}
+                                    </div>
+                                    <div class="p-col-12">
+                                        <b>Phone:</b> {{rowData.phone}}
+                                    </div>
+                                    <div class="p-col-12">
+                                        <b>Email:</b> {{rowData.email}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

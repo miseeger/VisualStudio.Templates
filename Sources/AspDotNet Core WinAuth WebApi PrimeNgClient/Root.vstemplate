@@ -1,0 +1,34 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>ASP.NET Core 3.1 WebAPI with PrimeNG Angular SPA Template</Name>
+		<Description>Creates an ASP.NET Core 3.1 Windows authenticated WebAPI using EF Core as ORM, with a PrimeNG Angular SPA.</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType></ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>false</CreateNewFolder>
+		<DefaultName>PrimeNgWebApp</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>PrimeNgWebApp.png</Icon>
+        <LanguageTag>CSharp</LanguageTag>
+        <PlatformTag>Windows</PlatformTag>
+        <ProjectTypeTag>Web</ProjectTypeTag>
+        <ProjectTypeTag>Angular</ProjectTypeTag> 
+        <ProjectTypeTag>PrimeNG</ProjectTypeTag> 
+        <ProjectTypeTag>ASP.NET Core 3.1</ProjectTypeTag> 
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Core" CopyParameters="true">
+                PrimeNgWebApp.Core\Core.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Web" CopyParameters="true">
+                PrimeNgWebApp.Web\Web.vstemplate
+            </ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Test" CopyParameters="true">
+                PrimeNgWebApp.Test\Test.vstemplate
+            </ProjectTemplateLink>
+        </ProjectCollection>
+	</TemplateContent>
+</VSTemplate>

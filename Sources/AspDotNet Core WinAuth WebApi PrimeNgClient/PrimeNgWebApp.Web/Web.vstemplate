@@ -1,0 +1,148 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>PrimeNgWebApp.Web</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>PrimeNgWebApp.Web</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <!-- <LocationField>Enabled</LocationField> -->
+    <!-- <EnableLocationBrowseButton>true</EnableLocationBrowseButton> -->    
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.Web.csproj" File="PrimeNgWebApp.Web.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <Folder Name="PublishProfiles" TargetFolderName="PublishProfiles">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Publish as Single File.pubxml">Publish as Single File.pubxml</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Publish to Folder.pubxml">Publish to Folder.pubxml</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <ProjectItem ReplaceParameters="false" TargetFileName="favicon.png">favicon.png</ProjectItem>
+      </Folder>
+      <Folder Name="ClientApp" TargetFolderName="ClientApp">
+        <Folder Name="e2e" TargetFolderName="e2e">
+          <Folder Name="src" TargetFolderName="src">
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.e2e-spec.ts">app.e2e-spec.ts</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.po.ts">app.po.ts</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="protractor.conf.js">protractor.conf.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.e2e.json">tsconfig.e2e.json</ProjectItem>
+        </Folder>
+        <Folder Name="src" TargetFolderName="src">
+          <Folder Name="app" TargetFolderName="app">
+            <Folder Name="_interfaces" TargetFolderName="_interfaces">
+              <ProjectItem ReplaceParameters="true" TargetFileName="icustomer.ts">icustomer.ts</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="istatistics.ts">istatistics.ts</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="itoptrack.ts">itoptrack.ts</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="iweatherforecast.ts">iweatherforecast.ts</ProjectItem>
+            </Folder>
+            <Folder Name="_services" TargetFolderName="_services">
+              <ProjectItem ReplaceParameters="true" TargetFileName="customer.service.ts">customer.service.ts</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="dashboard.service.ts">dashboard.service.ts</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="identity.service.ts">identity.service.ts</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="weatherforecast.service.ts">weatherforecast.service.ts</ProjectItem>
+            </Folder>
+            <Folder Name="about" TargetFolderName="about">
+              <ProjectItem ReplaceParameters="true" TargetFileName="about.component.css">about.component.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="about.component.html">about.component.html</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="about.component.ts">about.component.ts</ProjectItem>
+            </Folder>
+            <Folder Name="customers" TargetFolderName="customers">
+              <ProjectItem ReplaceParameters="true" TargetFileName="customers.component.css">customers.component.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="customers.component.html">customers.component.html</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="customers.component.ts">customers.component.ts</ProjectItem>
+            </Folder>
+            <Folder Name="dashboard" TargetFolderName="dashboard">
+              <ProjectItem ReplaceParameters="true" TargetFileName="dashboard.component.css">dashboard.component.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="dashboard.component.html">dashboard.component.html</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="dashboard.component.ts">dashboard.component.ts</ProjectItem>
+            </Folder>
+            <Folder Name="profile" TargetFolderName="profile">
+              <ProjectItem ReplaceParameters="true" TargetFileName="profile.component.css">profile.component.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="profile.component.html">profile.component.html</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="profile.component.ts">profile.component.ts</ProjectItem>
+            </Folder>
+            <Folder Name="statistic" TargetFolderName="statistic">
+              <ProjectItem ReplaceParameters="true" TargetFileName="statistic.component.css">statistic.component.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="statistic.component.html">statistic.component.html</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="statistic.component.ts">statistic.component.ts</ProjectItem>
+            </Folder>
+            <Folder Name="weather" TargetFolderName="weather">
+              <ProjectItem ReplaceParameters="true" TargetFileName="weather.component.css">weather.component.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="weather.component.html">weather.component.html</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="weather.component.ts">weather.component.ts</ProjectItem>
+            </Folder>
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.component.css">app.component.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.component.html">app.component.html</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.component.ts">app.component.ts</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.module.ts">app.module.ts</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.server.module.ts">app.server.module.ts</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.utils.ts">app.utils.ts</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="router.animations.ts">router.animations.ts</ProjectItem>
+          </Folder>
+          <Folder Name="assets" TargetFolderName="assets">
+            <Folder Name="img" TargetFolderName="img">
+              <ProjectItem ReplaceParameters="false" TargetFileName="logo-clear.png">logo-clear.png</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="addresscard.png">addresscard.png</ProjectItem>
+            </Folder>
+          </Folder>
+          <Folder Name="environments" TargetFolderName="environments">
+            <ProjectItem ReplaceParameters="true" TargetFileName="environment.prod.ts">environment.prod.ts</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="environment.ts">environment.ts</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="false" TargetFileName="favicon.png">favicon.png</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="karma.conf.js">karma.conf.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="main.ts">main.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="polyfills.ts">polyfills.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="styles.css">styles.css</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="test.ts">test.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.app.json">tsconfig.app.json</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.server.json">tsconfig.server.json</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.spec.json">tsconfig.spec.json</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="tslint.json">tslint.json</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="false" TargetFileName=".editorconfig">.editorconfig</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName=".gitignore">.gitignore</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="angular.json">angular.json</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="browserslist">browserslist</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="package.json">package.json</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="package-lock.json">package-lock.json</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="README.md">README.md</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.json">tsconfig.json</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="tslint.json">tslint.json</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AlbumController.cs">AlbumController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CustomerController.cs">CustomerController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DashboardController.cs">DashboardController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IdentityController.cs">IdentityController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecastController.cs">WeatherForecastController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Data" TargetFolderName="Data">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Chinook.sqlite">Chinook.sqlite</ProjectItem>
+      </Folder>
+      <Folder Name="Logging" TargetFolderName="Logging">
+        <ProjectItem ReplaceParameters="false" TargetFileName=".gitkeep">.gitkeep</ProjectItem>
+      </Folder>
+      <Folder Name="Middleware" TargetFolderName="Middleware">
+        <ProjectItem ReplaceParameters="true" TargetFileName="MiddlewareExtensions.cs">MiddlewareExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RequestLogMiddleware.cs">RequestLogMiddleware.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$PingMiddleware.cs">PrimeNgWebAppPingMiddleware.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.Development.json">appsettings.Development.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.Production.json">appsettings.Production.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="nlog.config">nlog.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="$safeprojectname$.csproj.targets">PrimeNgWebApp.Web.csproj.targets</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

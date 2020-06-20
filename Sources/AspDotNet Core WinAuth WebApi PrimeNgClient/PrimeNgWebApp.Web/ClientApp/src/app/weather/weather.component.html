@@ -1,0 +1,53 @@
+<div class="p-grid viewcomponent">
+    <div class="p-col-12">
+        <h2>Weather Forecast</h2>
+        <div style="margin-bottom: 1em;">
+            <button
+                type="button"
+                pButton
+                icon="fa fa-chevron-left"
+                (click)="prev()"
+                style="margin-right: 0.5em;"
+                [disabled]="isFirstPage()"
+            ></button>
+            <button
+                type="button"
+                pButton
+                icon="fa fa-refresh"
+                (click)="reset()"
+                style="margin-right: 0.5em;"
+            ></button>
+            <button
+                type="button"
+                pButton
+                icon="fa fa-chevron-right"
+                (click)="next()"
+                [disabled]="isLastPage()"
+            ></button>
+        </div>
+        <p-table
+            [columns]="cols"
+            [value]="forecasts"
+            [paginator]="true"
+            [rows]="rows"
+            [showCurrentPageReport]="true"
+            [(first)]="first"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        >
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns">
+                        {{ col.header }}
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr>
+                    <td *ngFor="let col of columns">
+                        {{ rowData[col.field] }}
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

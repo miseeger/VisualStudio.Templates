@@ -1,0 +1,20 @@
+<div class="statistic p-grid" [style.background-color]="colour">
+
+  <div class="icon p-col-5">
+    <i class="fa {{ icon }}" *ngIf="icon"></i>
+  </div>
+
+  <div class="data p-col-7">
+
+    <div class="value">
+      {{ value }}
+    </div>
+
+    <div class="label" *ngIf="label">
+      {{ label }}
+    </div>
+
+  </div>
+
+
+</div>

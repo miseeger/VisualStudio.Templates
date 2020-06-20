@@ -1,0 +1,54 @@
+<div class="p-grid viewcomponent">
+    <div class="p-col">
+        <app-statistic
+            label="Albums"
+            [value]="statistics.albumCount"
+            icon="fa fa-headphones"
+            colour="#00ACAC"
+            class="p-col-12 p-md-6 p-lg-3"
+        ></app-statistic>
+    </div>
+    <div class="p-col">
+        <app-statistic
+            label="Songs"
+            [value]="statistics.songCount"
+            icon="fa fa-music"
+            colour="#2F8EE5"
+            class="p-col-12 p-md-6 p-lg-3"
+        ></app-statistic>
+    </div>
+    <div class="p-col">
+        <app-statistic
+            label="Artists"
+            [value]="statistics.artistCount"
+            icon="fa fa-users"
+            colour="#6C76AF"
+            class="p-col-12 p-md-6 p-lg-3"
+        ></app-statistic>
+    </div>
+    <div class="p-col">
+        <app-statistic
+            label="Play-Len"
+            [value]="statistics.playLength"
+            icon="fa fa-hourglass-half"
+            colour="#EFA64C"
+            class="p-col-12 p-md-6 p-lg-3"
+        ></app-statistic>
+    </div>
+</div>
+<div class="p-grid viewcomponent">
+    <div class="p-col">
+        <h1>Top 3 Songs</h1>
+    </div>
+</div>
+<div class="p-grid viewcomponent"  style="margin-left: -0.1rem !important;">
+    <div *ngFor="let song of top3" class="p-col-12 p-md-6 p-lg-4">
+        <p-card [header]="'#' + song.trackRank">
+            <div>
+                <h1>{{ song.song }}</h1>
+                <i class="fa fa-headphones"></i> {{ song.album }} <br>
+                <i class="fa fa-user"></i> {{ song.artist}}
+            </div>
+        </p-card>
+    </div>
+</div>

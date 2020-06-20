@@ -1,0 +1,89 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>PrimeNgWebApp.Core</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>PrimeNgWebApp.Core</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.Core.csproj" File="PrimeNgWebApp.Core.csproj" ReplaceParameters="true">
+      <Folder Name="Data" TargetFolderName="Data">
+        <Folder Name="Configurations" TargetFolderName="Configurations">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AlbumConfiguration.cs">AlbumConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ArtistConfiguration.cs">ArtistConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="CustomerConfiguration.cs">CustomerConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="EmployeeConfiguration.cs">EmployeeConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="GenreConfiguration.cs">GenreConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="InvoiceConfiguration.cs">InvoiceConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="InvoiceLineConfiguration.cs">InvoiceLineConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MediaTypeConfiguration.cs">MediaTypeConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="PlaylistConfiguration.cs">PlaylistConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="PlaylistTrackConfiguration.cs">PlaylistTrackConfiguration.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="TrackConfiguration.cs">TrackConfiguration.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Converters" TargetFolderName="Converters">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AlbumConverter.cs">AlbumConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ArtistConverter.cs">ArtistConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="CustomerConverter.cs">CustomerConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="EmployeeConverter.cs">EmployeeConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="GenreConverter.cs">GenreConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="InvoiceConverter.cs">InvoiceConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="InvoiceLineConverter.cs">InvoiceLineConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MediaTypeConverter.cs">MediaTypeConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="PlaylistConverter.cs">PlaylistConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="PlaylistTrackConverter.cs">PlaylistTrackConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="TrackConverter.cs">TrackConverter.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Entities" TargetFolderName="Entities">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Album.cs">Album.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Artist.cs">Artist.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Customer.cs">Customer.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Employee.cs">Employee.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Genre.cs">Genre.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Invoice.cs">Invoice.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="InvoiceLine.cs">InvoiceLine.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MediaType.cs">MediaType.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Playlist.cs">Playlist.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="PlaylistTrack.cs">PlaylistTrack.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Track.cs">Track.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecast.cs">WeatherForecast.cs</ProjectItem>
+        </Folder>
+        <Folder Name="ViewModels" TargetFolderName="ViewModels">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AlbumViewModel.cs">AlbumViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ArtistViewModel.cs">ArtistViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="CustomerViewModel.cs">CustomerViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="EmployeeViewModel.cs">EmployeeViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="GenreViewModel.cs">GenreViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="InvoiceLineViewModel.cs">InvoiceLineViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="InvoiceViewModel.cs">InvoiceViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MediaTypeViewModel.cs">MediaTypeViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="PlaylistTrackViewModel.cs">PlaylistTrackViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="PlaylistViewModel.cs">PlaylistViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="StatisticsViewModel.cs">StatisticsViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="TopTrackViewModel.cs">TopTrackViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="TrackViewModel.cs">TrackViewModel.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DataContext.cs">DataContext.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Interface" TargetFolderName="Interface">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IDashboardService.cs">IDashboardService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IMailerService.cs">IMailerService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IWeatherForecastService.cs">IWeatherForecastService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Service" TargetFolderName="Service">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DashboardService.cs">DashboardService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MailerService.cs">MailerService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecastService.cs">WeatherForecastService.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

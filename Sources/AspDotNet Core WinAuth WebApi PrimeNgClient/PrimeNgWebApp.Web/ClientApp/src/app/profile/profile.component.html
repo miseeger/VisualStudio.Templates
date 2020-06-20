@@ -1,0 +1,16 @@
+<div class="p-grid viewcomponent">
+    <div class="p-col-12">
+        <p-card
+            [style]="{ width: '465px' }"
+            styleClass="ui-card-shadow"
+        >
+            <p-header>
+                <i id="usericon" class="fa fa-user"></i>
+                <h2 id="identity">{{ identity.name }}</h2>
+            </p-header>
+            <div *ngIf="identity.name > ''">
+                Congratulations you have been identified as a valid Windows user!
+            </div>
+        </p-card>
+    </div>
+</div>
