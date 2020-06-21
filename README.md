@@ -8,32 +8,6 @@ A template generating a quickstart-/boilerplate-project to be hosted on IIS, pow
 
 The project also contains a ready-to-use [NPoco](https://github.com/schotime/NPoco) data service for SQLite.
 
-### Getting started (VS 2019)
-
-- Copy the template's ZIP-file to your VS project template folder.
-
-- Start VS and choose Create a new project (look for `C#` / `Windows` / `Angular` or search for `PrimeNG`) .
-
-- Select the "ASP.NET Core 3.1 WebAPI with Angular SPA Template". Click `Next`
-
-- Input project name and choose location. Click `create`.
-
-- When the project is created,  open a terminal window (CMD) and go to `path\to\your\<project>\<project>.web\ClientApp` and execute the following:
-
-  ```
-  > npm install
-  ```
-
-  ```
-  > npm start
-  ```
-
-  The latter precompiles some modules in order to "optimize" further starts from VS.
-
-- When the dev server is startet, hit `CTRL+C` in order to cancel.
-
-- Start the project from VS as usual.
-
 
 
 ##  ![image](https://raw.githubusercontent.com/miseeger/VisualStudio.Templates/master/Sources/AspDotNet%20Core%20WinAuth%20WebApi%20PrimeNgClient/PrimeNgWebApp.png) ASP.NET Core PrimeNG Angular App with WebAPI
@@ -42,31 +16,35 @@ A template generating a boilerplate-project to be hosted on IIS, powered by ASP.
 
 The underlying database is accessed by using EF Core. Code for the data tier is partly taken/adapted from the project [ChinookASPNETCoreAPINTier](https://github.com/cwoodruff/ChinookASPNETCoreAPINTier).
 
-### Getting started (VS 2019)
 
-- Copy the template's ZIP-file to your VS project template folder.
 
-- Start VS and choose Create a new project (look for `C#` / `Windows` / `Angular` or search for `PrimeNG`) .
-
-- Select the "ASP.NET Core 3.1 WebAPI with PrimeNG Angular SPA Template". Click `Next`
-
-- Input project name and choose location. Click `create`.
-
-- When the project is created,  open a terminal window (CMD) and go to `path\to\your\<project>\<project>.web\ClientApp` and execute the following:
-
-  ```
-  > npm install
-  ```
-
-  ```
-  > npm start
-  ```
-
-  The latter precompiles some modules in order to "optimize" further starts from VS.
-
-- When the dev server is startet, hit `CTRL+C` in order to cancel.
-
-- Start the project from VS as usual.
+> ### Getting started with any of the above Angular projects (VS 2019)
+>
+> - Download the template's ZIP-file and save it in your VS project template folder.
+>
+> - Start VS and choose Create a new project (look for `C#` / `Windows` / `Angular` or search for `PrimeNG`) .
+>
+> - Select the "ASP.NET Core 3.1 WebAPI with PrimeNG Angular SPA Template". Click `Next`
+>
+> - Input project name and choose location. Click `create`.
+>
+> - When the project is created,  open a console window (CMD) and go to `path\to\your\<project>\<project>.web\ClientApp`. Execute the following:
+>
+>  ```
+>  > npm install
+>  ```
+>
+>  ```
+>  > npm start
+>  ```
+>
+>  The latter precompiles the app in order to "optimize" further starts from VS.
+>
+> - When the dev server is startet, hit `CTRL+C` in order to cancel.
+>
+> - Close the console window
+>
+> - Start the project from VS as usual.
 
 
 
@@ -87,3 +65,13 @@ A template generating a quickstart-/boilerplate-project to self-host a Web API p
 The project also contains a ready-to-use [NPoco](https://github.com/schotime/NPoco) data service.
 
 This template is heavily based on the Microsoft documentaion on how to [host an ASP.NET Core app in a Windows Service](https://docs.microsoft.com/en-us/aspnet/core/hosting/windows-service). 
+
+
+
+## Further Templates
+
+This repo also contains some Vue boilerplate templates:
+
+- ASP.NET Core Vue App with WebAPI, Windows authorization and EF-Core (simple)
+- ASP.NET Core Vue App with WebAPI, JWT authorization and EF-Core
+- ASP.NET Core Vue App with SignalR, WebAPI, JWT authorization and EF-Core
