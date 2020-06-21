@@ -28,7 +28,7 @@ The underlying database is accessed by using EF Core. Code for the data tier is 
 >
 > - Input project name and choose location. Click `create`.
 >
-> - When the project is created,  open a console window (CMD) and go to `path\to\your\<project>\<project>.web\ClientApp`. Execute the following:
+> - When the project is created,  open a console window (CMD) and go to `path\to\your\<project>\<project>.Web\ClientApp`. Execute the following:
 >
 >    ```
 >    > npm install
@@ -44,7 +44,7 @@ The underlying database is accessed by using EF Core. Code for the data tier is 
 >
 > - Close the console window
 >
-> - Start the project from VS as usual.
+> - Make the `<project>.Web` project your startup project and start it from VS as usual.
 
 
 
