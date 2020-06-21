@@ -30,15 +30,15 @@ The underlying database is accessed by using EF Core. Code for the data tier is 
 >
 > - When the project is created,  open a console window (CMD) and go to `path\to\your\<project>\<project>.web\ClientApp`. Execute the following:
 >
->  ```
->  > npm install
->  ```
+>    ```
+>    > npm install
+>    ```
 >
->  ```
->  > npm start
->  ```
+>    ```
+>    > npm start
+>    ```
 >
->  The latter precompiles the app in order to "optimize" further starts from VS.
+>    The latter precompiles the app in order to "optimize" further starts from VS.
 >
 > - When the dev server is startet, hit `CTRL+C` in order to cancel.
 >
