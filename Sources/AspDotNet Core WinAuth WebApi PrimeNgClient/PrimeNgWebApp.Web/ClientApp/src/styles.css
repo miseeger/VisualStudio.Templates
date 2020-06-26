@@ -13,6 +13,10 @@ router-outlet {
     padding-left: 0.5rem;
 }
 
+.viewcomponentsibling {
+    padding-left: 0.5rem;
+}
+
 .ui-panel-titlebar {
   background-color: #2F8EE5 !important;
   color: white !important;
@@ -59,6 +63,19 @@ body .ui-menu .ui-menuitem :hover {
 
 .p-grid {
     font-family: "Open Sans";
+}
+
+formly-wrapper-primeng-form-field input  {
+  width: 100%;
+}
+
+
+p-dropdown>div.ui-dropdown {
+  width: 100%;
+}
+
+p-multiselect>div.ui-multiselect {
+    width: 100%;
 }
 
 /* Debugging Layouts

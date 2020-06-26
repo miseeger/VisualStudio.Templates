@@ -21,36 +21,42 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.menuItems = [
-      {
-        label: 'Dashboard',
-        icon: 'fa fa-home',
-        routerLink: ['/dashboard'],
-        routerLinkActiveOptions: { exact: true },
-      },
-      {
-        label: 'Customers',
-        icon: 'fa fa-users',
-        routerLink: ['/customers'],
-        routerLinkActiveOptions: { exact: true },
-      },
-      {
-        label: 'Weatherforecast',
-        icon: 'fa fa-cloud',
-        routerLink: ['/weather'],
-        routerLinkActiveOptions: { exact: true },
-      },
-      {
-        label: 'My Profile',
-        icon: 'fa fa-user-circle',
-        routerLink: ['/profile'],
-        routerLinkActiveOptions: { exact: true },
-      },
-      {
-        label: 'About',
-        icon: 'fa fa-info-circle',
-        routerLink: ['/about'],
-        routerLinkActiveOptions: { exact: true },
-      },
+        {
+            label: 'Dashboard',
+            icon: 'fa fa-home',
+            routerLink: ['/dashboard'],
+            routerLinkActiveOptions: { exact: true },
+        },
+        {
+            label: 'Customers',
+            icon: 'fa fa-users',
+            routerLink: ['/customers'],
+            routerLinkActiveOptions: { exact: true },
+        },
+        {
+            label: 'Weatherforecast',
+            icon: 'fa fa-cloud',
+            routerLink: ['/weather'],
+            routerLinkActiveOptions: { exact: true },
+        },
+        {
+            label: 'Formly PrimeNG',
+            icon: 'fa fa-file-text-o',
+            routerLink: ['/formly'],
+            routerLinkActiveOptions: { exact: true },
+        },
+        {
+            label: 'My Profile',
+            icon: 'fa fa-user-circle',
+            routerLink: ['/profile'],
+            routerLinkActiveOptions: { exact: true },
+        },
+        {
+            label: 'About',
+            icon: 'fa fa-info-circle',
+            routerLink: ['/about'],
+            routerLinkActiveOptions: { exact: true },
+        },
     ];
 
     this.miniMenuItems = [];

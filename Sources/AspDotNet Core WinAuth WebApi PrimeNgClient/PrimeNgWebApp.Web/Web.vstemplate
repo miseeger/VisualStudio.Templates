@@ -36,6 +36,11 @@
         </Folder>
         <Folder Name="src" TargetFolderName="src">
           <Folder Name="app" TargetFolderName="app">
+            <Folder Name="_formly" TargetFolderName="_formly">
+              <ProjectItem ReplaceParameters="true" TargetFileName="ip.validator.ts">ip.validator.ts</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="p-multi-select.type.ts">p-multi-select.type.ts</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="p-select-button.type.ts">p-select-button.type.ts</ProjectItem>
+            </Folder>          
             <Folder Name="_interfaces" TargetFolderName="_interfaces">
               <ProjectItem ReplaceParameters="true" TargetFileName="icustomer.ts">icustomer.ts</ProjectItem>
               <ProjectItem ReplaceParameters="true" TargetFileName="istatistics.ts">istatistics.ts</ProjectItem>
@@ -46,6 +51,7 @@
               <ProjectItem ReplaceParameters="true" TargetFileName="customer.service.ts">customer.service.ts</ProjectItem>
               <ProjectItem ReplaceParameters="true" TargetFileName="dashboard.service.ts">dashboard.service.ts</ProjectItem>
               <ProjectItem ReplaceParameters="true" TargetFileName="identity.service.ts">identity.service.ts</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="prime-formly.service.ts">prime-formly.service.ts</ProjectItem>
               <ProjectItem ReplaceParameters="true" TargetFileName="weatherforecast.service.ts">weatherforecast.service.ts</ProjectItem>
             </Folder>
             <Folder Name="about" TargetFolderName="about">
@@ -62,6 +68,11 @@
               <ProjectItem ReplaceParameters="true" TargetFileName="dashboard.component.css">dashboard.component.css</ProjectItem>
               <ProjectItem ReplaceParameters="true" TargetFileName="dashboard.component.html">dashboard.component.html</ProjectItem>
               <ProjectItem ReplaceParameters="true" TargetFileName="dashboard.component.ts">dashboard.component.ts</ProjectItem>
+            </Folder>
+            <Folder Name="prime-formly" TargetFolderName="prime-formly">
+              <ProjectItem ReplaceParameters="true" TargetFileName="prime-formly.component.css">prime-formly.component.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="prime-formly.component.html">prime-formly.component.html</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="prime-formly.component.ts">prime-formly.component.ts</ProjectItem>
             </Folder>
             <Folder Name="profile" TargetFolderName="profile">
               <ProjectItem ReplaceParameters="true" TargetFileName="profile.component.css">profile.component.css</ProjectItem>
@@ -113,7 +124,6 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="angular.json">angular.json</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="browserslist">browserslist</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="package.json">package.json</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="package-lock.json">package-lock.json</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="README.md">README.md</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.json">tsconfig.json</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="tslint.json">tslint.json</ProjectItem>

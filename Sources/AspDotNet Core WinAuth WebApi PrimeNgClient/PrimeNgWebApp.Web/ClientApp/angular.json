@@ -27,6 +27,7 @@
             "styles": [
               "node_modules/opensans-webkit/src/css/open-sans.min.css",
               "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/primeng.css",
               "node_modules/primeflex/primeflex.css",
               "node_modules/primeng/resources/themes/nova-colored/theme.css",
@@ -85,6 +86,7 @@
             "styles": [
               "node_modules/opensans-webkit/src/css/open-sans.min.css",
               "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/primeng.css",
               "node_modules/primeflex/primeflex.css",
               "node_modules/primeng/resources/themes/nova-colored/theme.css",

@@ -43,7 +43,7 @@ export class WeatherComponent implements OnInit {
     }
 
     isLastPage(): boolean {
-        return this.first === this.forecasts.length - this.rows;
+        return this.first === (this.forecasts.length || 0) - this.rows;
     }
 
     isFirstPage(): boolean {
