@@ -164,7 +164,7 @@ namespace $safeprojectname$
 
             app.UseRequestLogging();
             app.UseHttpsRedirection();
-            app.Use$ext_safeprojectname$Ping();
+            app.UsePing();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
             app.UseRouting();

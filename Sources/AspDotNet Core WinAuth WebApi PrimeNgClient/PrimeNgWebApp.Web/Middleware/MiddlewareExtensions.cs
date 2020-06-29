@@ -11,9 +11,9 @@ namespace $safeprojectname$.Middleware
 
         }
 
-        public static IApplicationBuilder Use$ext_safeprojectname$Ping(this IApplicationBuilder builder)
+        public static IApplicationBuilder UsePing(this IApplicationBuilder builder)
         {
-            return builder.UseMiddleware<$ext_safeprojectname$PingMiddleware>();
+            return builder.UseMiddleware<PingMiddleware>();
         }
     }
 

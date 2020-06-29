@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Http;
 
 namespace $safeprojectname$.Middleware
 {
-    public class $ext_safeprojectname$PingMiddleware
+    public class PingMiddleware
     {
         private readonly RequestDelegate _next;
 
-        public $ext_safeprojectname$PingMiddleware(RequestDelegate next)
+        public PingMiddleware(RequestDelegate next)
         {
             _next = next;
         }

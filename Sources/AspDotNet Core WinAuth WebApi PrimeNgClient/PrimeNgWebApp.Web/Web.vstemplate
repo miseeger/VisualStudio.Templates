@@ -144,7 +144,7 @@
       <Folder Name="Middleware" TargetFolderName="Middleware">
         <ProjectItem ReplaceParameters="true" TargetFileName="MiddlewareExtensions.cs">MiddlewareExtensions.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="RequestLogMiddleware.cs">RequestLogMiddleware.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="$ext_safeprojectname$PingMiddleware.cs">PrimeNgWebAppPingMiddleware.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PingMiddleware.cs">PingMiddleware.cs</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.Development.json">appsettings.Development.json</ProjectItem>
