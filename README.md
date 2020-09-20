@@ -10,9 +10,9 @@ The project also contains a ready-to-use [NPoco](https://github.com/schotime/NPo
 
 
 
-##  ![image](https://raw.githubusercontent.com/miseeger/VisualStudio.Templates/master/Sources/AspDotNet%20Core%20WinAuth%20WebApi%20PrimeNgClient/PrimeNgWebApp.png) ASP.NET Core PrimeNG Angular App with WebAPI
+##  ![image](https://raw.githubusercontent.com/miseeger/VisualStudio.Templates/master/Sources/AspDotNet%20Core%20WinAuth%20WebApi%20PrimeNgClient/PrimeNgWebApp.png) ASP.NET Core PrimeNG 10 Angular App with WebAPI
 
-A template generating a boilerplate-project to be hosted on IIS, powered by ASP.NET Core 3.1, using Windows Authentication. The ClientApp is built with Angular 9 and consumes the WebAPI built with ASP.NET Core.
+A template generating a boilerplate-project to be hosted on IIS, powered by ASP.NET Core 3.1, using Windows Authentication. The ClientApp is built with Angular 10 using PrimeNG X and consumes a WebAPI built with ASP.NET Core.
 
 The underlying database is accessed by using EF Core. Code for the data tier is partly taken/adapted from the project [ChinookASPNETCoreAPINTier](https://github.com/cwoodruff/ChinookASPNETCoreAPINTier).
 
