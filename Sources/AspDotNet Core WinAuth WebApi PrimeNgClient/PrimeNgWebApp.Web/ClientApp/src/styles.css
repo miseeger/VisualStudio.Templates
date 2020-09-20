@@ -17,45 +17,45 @@ router-outlet {
     padding-left: 0.5rem;
 }
 
-.ui-panel-titlebar {
+.p-panel-titlebar {
   background-color: #2F8EE5 !important;
   color: white !important;
 }
 
-.ui-menu {
+.p-menu {
   width: auto !important;
   margin: 0px !important;
   border: none !important;
   background-color: #2A2A2A !important
 }
 
-.ui-menu-list {
-  background-color: black;
+.p-menu-list {
+  background-color: #2A2A2A;
 }
 
-.ui-menuitem {
+.p-menuitem {
   border-radius: 0px !important;
 }
 
-.ui-menuitem-text {
+.p-menuitem-text {
   color: white !important;
 }
 
-.ui-menuitem-icon {
+.p-menuitem-icon {
   color: white !important;
   font-size: large !important;
   margin-right: 1em;
 }
 
-body .ui-menu .ui-menuitem :hover {
+body .p-menu .p-menuitem :hover {
   background-color: #3daedb !important;
 }
 
-.ui-menuitem-link {
+.p-menuitem-link {
     box-shadow: none !important;
 }
 
-.ui-menuitem-link.ui-menuitem-link-active {
+.p-menuitem-link.p-menuitem-link-active {
   background-color: #aa2222 !important;
   color: #ffffff;
   box-shadow: none !important;
@@ -69,30 +69,33 @@ formly-wrapper-primeng-form-field input  {
   width: 100%;
 }
 
+formly-validation-message {
+    color: #f44336;
+}
 
-p-dropdown>div.ui-dropdown {
+p-dropdown>div.p-dropdown {
   width: 100%;
 }
 
-p-multiselect>div.ui-multiselect {
+p-multiselect>div.p-multiselect {
     width: 100%;
 }
 
 /* Debugging Layouts
 @media screen and (min-width: 64.063em) {
-  .ui-lg-3 {
+  .p-lg-3 {
     background-color: green;
   }
 }
 
 @media screen and (min-width: 40.063em) {
-  .ui-md-6 {
+  .p-md-6 {
     background-color: yellow;
   }
 }
 
 @media screen and (max-width: 40em) {
-  .ui-sm-12 {
+  .p-sm-12 {
     background-color: palevioletred;
   }
 }

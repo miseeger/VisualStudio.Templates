@@ -9,7 +9,7 @@ namespace $safeprojectname$
     {
 
         [TestMethod]
-        public void ShuldCrate5Forecasts()
+        public void ShouldCrate5Forecasts()
         {
             var fs = new WeatherForecastService();
             Assert.AreEqual(5, fs.getForecastsAsync(5).Result.Count());

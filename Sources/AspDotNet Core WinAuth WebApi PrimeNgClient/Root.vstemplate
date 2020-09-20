@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
 	<TemplateData>
-		<Name>ASP.NET Core 3.1 WebAPI with PrimeNG Angular SPA Template</Name>
-		<Description>Creates an ASP.NET Core 3.1 Windows authenticated WebAPI using EF Core as ORM, with a PrimeNG Angular SPA.</Description>
+		<Name>ASP.NET Core 3.1 WebAPI with PrimeNG X (Angular 10) SPA Template</Name>
+		<Description>Creates an ASP.NET Core 3.1 Windows authenticated WebAPI using EF Core as ORM, with a PrimeNG X (Angular 10) SPA.</Description>
 		<ProjectType>CSharp</ProjectType>
 		<ProjectSubType></ProjectSubType>
 		<SortOrder>1000</SortOrder>
